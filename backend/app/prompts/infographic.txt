@@ -1,0 +1,6 @@
+Create a clean, minimal financial infographic card (16:9 landscape) for a research product called SignalRoom.
+Dark background (#08090D), violet (#8B5CF6) and pink (#EC4899) accents, generous whitespace,
+modern geometric sans-serif typography, horizontal bars for the driver percentages.
+No photographs, no people, no real company logos, no stock-market cliches (no bulls, bears, rockets).
+Render ONLY the text and numbers listed below - do not add any other numbers, dates or claims.
+Include the small footer text "AI-generated illustration - Not investment advice".

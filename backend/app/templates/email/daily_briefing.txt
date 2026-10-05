@@ -1,0 +1,22 @@
+SignalRoom — Daily briefing {{ b.date }}
+
+{{ b.greeting or "Good morning." }}
+{{ b.headline }}
+
+{{ b.summary }}
+{% for item in sections %}
+{{ loop.index }}. {{ item.section.title }}{% if item.section.symbol %} ({{ item.section.symbol }}){% endif %}
+{{ item.section.body }}
+{% if item.section.why_it_matters %}Why it matters: {{ item.section.why_it_matters }}{% endif %}
+{% for s in item.sources %}- {{ s.publisher }}: {{ s.url }}
+{% endfor %}{% endfor %}
+{% if moves %}Watchlist:
+{% for m in moves %}- {{ m.symbol }}: {{ m.move_pct|pct }}
+{% endfor %}{% endif %}
+{% if b.risk_flags %}Risk flag: {{ b.risk_flags[0] }}{% endif %}
+
+Open the full briefing: {{ link }}
+{% if audio_url %}Listen: {{ audio_url }}{% endif %}
+
+{{ b.disclaimer }}
+Manage preferences or unsubscribe: {{ settings_link }}

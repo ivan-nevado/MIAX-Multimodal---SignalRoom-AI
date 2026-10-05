@@ -1,0 +1,23 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.serena/
+data/runtime/
+*.log
+.terraform/
+*.tfstate*
+frontend/dist/
+frontend/dist-demo/
+frontend/node_modules/
+terraform/**/terraform.tfvars
+terraform/**/backend.tf
+.mypy_cache/
+.ruff_cache/
+
+# Lambda zip built by terraform
+terraform/modules/cognito/lambda/*.zip

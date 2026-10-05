@@ -1,0 +1,849 @@
+{
+ "investigation": {
+  "investigation_id": "demo_webinar",
+  "symbol": null,
+  "asset_name": null,
+  "asset_type": null,
+  "question": "Summarize this results webinar: key figures shown on the slides, guidance and risks.",
+  "status": "completed",
+  "progress": 100,
+  "current_agent": null,
+  "status_message": "Investigation complete",
+  "plan": {
+   "intent": "earnings_review",
+   "agents": [
+    "video",
+    "sentiment",
+    "event_detection",
+    "risk",
+    "evidence",
+    "synthesis"
+   ],
+   "rationale": "The video agent is required to analyze the webinar and extract slide figures, guidance, and stated risks. Evidence and synthesis are always required; no asset is identified for additional market or company research.",
+   "time_window_days": 7
+  },
+  "attachments": [
+   {
+    "upload_id": "up_demo_video",
+    "kind": "video",
+    "filename": "northwind_webinar.mp4",
+    "content_type": "video/mp4",
+    "storage_key": "users/demo-user/uploads/videos/up_demo_video/northwind_webinar.mp4",
+    "size_bytes": 1156170
+   }
+  ],
+  "generate_audio": false,
+  "result": {
+   "symbol": null,
+   "asset_name": null,
+   "question": "Summarize this results webinar: key figures shown on the slides, guidance and risks.",
+   "intent": "earnings_review",
+   "executive_summary": "Northwind Semiconductors reported record Q3 FY2026 revenue of $4.2 billion, up 31% year over year, with data center accelerators growing 44% and contributing 70% of revenue. Diluted EPS was $1.12. Management guided Q4 revenue to $4.0\u2013$4.2 billion and gross margin to approximately 60%, citing an estimated $300 million export-license impact and ongoing packaging-cost pressure. Risks highlighted include export restrictions and customer concentration, with the largest cloud customer representing 22% of revenue.",
+   "what_happened": "The webinar presented Q3 FY2026 revenue of $4.2 billion, including $2.94 billion from data center accelerators. Gross margin was 61.5%, down 1.2 percentage points sequentially; operating income was $1.302 billion, net income was $1.071 billion, and diluted EPS was $1.12. The company reported $5.8 billion in cash and $2.1 billion of long-term debt, and announced a $1.0 billion share repurchase program. For Q4, management guided revenue of $4.0\u2013$4.2 billion and gross margin of approximately 60%, incorporating an estimated $300 million negative impact from new export license requirements.",
+   "drivers": [
+    {
+     "driver_id": "drv_video_up_demo_video",
+     "name": "Management presentation (northwind_webinar.mp4)",
+     "category": "earnings",
+     "explanation": "The webinar is the sole provided driver and contains the reported Q3 results, Q4 guidance, and stated risks. The evidence suggests strong data center growth alongside near-term pressure from export-license requirements and packaging costs; management also cited customer concentration.",
+     "contribution_score": 100.0,
+     "raw_score": 0.32,
+     "components": {
+      "relevance": 0.8,
+      "source_support": 0.5,
+      "temporal_alignment": 0.8,
+      "sentiment_shift": 0.5
+     },
+     "evidence_ids": [
+      "src_video_up_demo_video"
+     ]
+    }
+   ],
+   "market_context": "Not enough evidence available to assess share-price or broader market context; the supplied material covers the webinar rather than market trading.",
+   "financial_context": "Reported Q3 FY2026 figures include $4.2 billion in revenue, $1.302 billion in operating income, $1.071 billion in net income, and diluted EPS of $1.12. The webinar reported $5.8 billion in cash and $2.1 billion in long-term debt. These are presentation figures; no additional filing or independent financial data was provided.",
+   "sentiment_summary": "The supplied sentiment assessment is negative, with low evidence confidence. Management's presentation tone was characterized as cautious, particularly around Q4 guidance and export-license uncertainty.",
+   "risk_summary": "The webinar identifies export-license requirements as a Q4 revenue headwind, with an estimated impact of about $300 million. Higher packaging costs and industry capacity constraints are associated with gross-margin pressure. Customer concentration is another stated risk: the largest cloud customer accounts for 22% of revenue. Each risk is assessed as medium in the supplied risk data.",
+   "what_to_watch": [
+    "Whether export-license requirements change and whether management can reallocate affected supply.",
+    "Q4 revenue relative to the $4.0\u2013$4.2 billion guidance range.",
+    "Gross-margin performance relative to the approximately 60% Q4 outlook, including packaging-cost and capacity developments.",
+    "Updates on demand from the largest cloud customer, which represents 22% of revenue."
+   ],
+   "uncertainties": [
+    "The webinar provides management's estimate of the export-license impact, but the eventual effect and timing are not established in the supplied evidence.",
+    "Management described part of the export-related impact as potentially temporary and said supply reallocation discussions were underway; the outcome is unknown.",
+    "The supplied sentiment assessment has low evidence confidence.",
+    "No market-price reaction, detailed historical financial series, or independent corroboration of the presentation figures was provided."
+   ],
+   "claims": [
+    {
+     "claim_id": "c_175a8c244aaa",
+     "claim": "Q3 FY2026 revenue grew 31% year-over-year to a record $4.2 billion ($4,200M).",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "src_video_up_demo_video"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "medium"
+    },
+    {
+     "claim_id": "c_b9810910d4d6",
+     "claim": "Data center accelerator revenue increased 44% year-over-year to $2.94 billion, representing 70% of corporate revenue.",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "src_video_up_demo_video"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "medium"
+    },
+    {
+     "claim_id": "c_5147e69d2304",
+     "claim": "Gross margin contracted 1.2 percentage points sequentially to 61.5% due to higher packaging costs.",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "src_video_up_demo_video"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "medium"
+    },
+    {
+     "claim_id": "cs_7f95a8b141ef",
+     "claim": "Q3 FY2026 revenue was reported at a record $4.2 billion, up 31% year over year.",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "src_video_up_demo_video"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "cs_2b1edcafa1eb",
+     "claim": "Data center accelerator revenue was reported at $2.94 billion, up 44% year over year and representing 70% of corporate revenue.",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "src_video_up_demo_video"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "cs_a5fc17666728",
+     "claim": "Q3 gross margin was 61.5%, down 1.2 percentage points sequentially; management attributed the pressure to higher packaging costs.",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "src_video_up_demo_video"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "cs_176599dc2f5f",
+     "claim": "Management guided Q4 FY2026 revenue to $4.0\u2013$4.2 billion and gross margin to approximately 60%, including an estimated $300 million negative export-license impact.",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "src_video_up_demo_video"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "cs_c709540761c0",
+     "claim": "The largest cloud customer was reported to contribute 22% of revenue, creating customer-concentration exposure.",
+     "claim_type": "interpretation",
+     "evidence_ids": [
+      "src_video_up_demo_video"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "cs_19bd95ecd4fb",
+     "claim": "The company announced a $1.0 billion share repurchase program.",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "src_video_up_demo_video"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    }
+   ],
+   "market": null,
+   "news": null,
+   "sentiment": {
+    "overall_tone": -0.2,
+    "recent_tone": null,
+    "prior_tone": null,
+    "sentiment_change": null,
+    "label": "negative",
+    "agreement": "aligned",
+    "evidence_confidence": "low",
+    "confidence_reason": "No supporting source was found.",
+    "timeline": [],
+    "cluster_sentiment": [
+     {
+      "cluster_id": "src_video_up_demo_video",
+      "theme": "Management tone (northwind_webinar.mp4)",
+      "tone": -0.2
+     }
+    ]
+   },
+   "events": {
+    "events": [
+     {
+      "id": "ev_94cb2ea0505d",
+      "timestamp": "2026-10-05T14:20:05.635382+00:00",
+      "event_type": "guidance_change",
+      "title": "Guidance presented in northwind_webinar.mp4",
+      "description": "Q4 FY2026 revenue is expected to be between $4.0 billion and $4.2 billion.; Q4 revenue guidance incorporates an estimated ~$300 million negative impact from new export license requirements.",
+      "origin": "video",
+      "source_ids": [
+       "src_video_up_demo_video"
+      ]
+     }
+    ]
+   },
+   "financial": null,
+   "macro": null,
+   "risks": {
+    "items": [
+     {
+      "risk": "regulatory",
+      "level": "MEDIUM",
+      "reason": "New export license requirements are expected to reduce Q4 revenue by about $300 million, although management says it is discussing supply reallocation and views part of the impact as temporary.",
+      "evidence_ids": [
+       "src_video_up_demo_video"
+      ]
+     },
+     {
+      "risk": "operational",
+      "level": "MEDIUM",
+      "reason": "Higher packaging costs and industry capacity constraints have contributed to sequential gross-margin contraction, with Q4 gross margin guided lower at approximately 60%.",
+      "evidence_ids": [
+       "src_video_up_demo_video"
+      ]
+     },
+     {
+      "risk": "concentration",
+      "level": "MEDIUM",
+      "reason": "The largest cloud customer accounts for 22% of revenue, creating exposure if that customer's demand or purchasing changes.",
+      "evidence_ids": [
+       "src_video_up_demo_video"
+      ]
+     }
+    ]
+   },
+   "documents": [],
+   "images": [],
+   "audio": [],
+   "videos": [
+    {
+     "upload_id": "up_demo_video",
+     "filename": "northwind_webinar.mp4",
+     "summary": "Northwind Semiconductors reported record Q3 FY2026 revenue of $4.2 billion, an increase of 31% year-over-year, driven by 44% growth in its data center accelerator business which now accounts for 70% of total revenue. Diluted earnings per share reached $1.12 with operating income of $1.3 billion, while gross margin declined 120 basis points sequentially to 61.5% due to elevated packaging costs. For Q4 FY2026, management guided revenue between $4.0 billion and $4.2 billion and gross margins around 60%, incorporating an estimated $300 million negative impact from new export license restrictions. Management announced a new $1.0 billion share repurchase program while noting customer concentration risks, with the top cloud customer generating 22% of revenue.",
+     "language": "en",
+     "speakers": [
+      "Operator",
+      "Dana Reyes (CEO)",
+      "Marcus Lin (CFO)",
+      "Priya (Analyst)"
+     ],
+     "segment_count": 7,
+     "transcript_key": "users/demo-user/investigations/demo_webinar/output/transcripts/up_demo_video.json",
+     "transcript_preview": [
+      {
+       "speaker": "Operator",
+       "start": "00:00",
+       "text": "Good afternoon, and welcome to the Northwind Semiconductors third quarter fiscal 2026 earnings call. Today's call contains forward-looking statements, and actual results may differ materially. I will now hand the call over to our Chief Executive Officer, Dana Reyes."
+      },
+      {
+       "speaker": "Dana Reyes (CEO)",
+       "start": "00:15",
+       "text": "Thank you, and good afternoon everyone. Northwind delivered record revenue of $4.2 billion this quarter, up 31% from a year ago, driven by demand for our data center accelerators. Data center revenue grew 44% and now represents 70% of our business. At the same time, I want to be transparent about two headwinds. First, new export license requirements for advanced chips shipping to certain regions will reduce our fourth-quarter revenue by an estimated $300 million. Second, our largest cloud customer accounted for 22% of revenue, so our concentration remains high."
+      },
+      {
+       "speaker": "Marcus Lin (CFO)",
+       "start": "00:56",
+       "text": "Thanks, Dana. Gross margin was 61.5%, down 1.2 points sequentially, mainly because of higher packaging costs. Operating income was $1.3 billion. We ended the quarter with $5.8 billion in cash and $2.1 billion of long-term debt."
+      },
+      {
+       "speaker": "Marcus Lin (CFO)",
+       "start": "01:14",
+       "text": "For the fourth quarter, we expect revenue of $4.0 to $4.2 billion, which includes the impact of the export restrictions, and gross margin of approximately 60%. We are also announcing a new $1 billion share repurchase program."
+      },
+      {
+       "speaker": "Priya (Analyst)",
+       "start": "01:30",
+       "text": "Thanks for taking my question. Can you quantify how much of the guidance reduction is temporary and whether you can redirect that supply to other customers?"
+      },
+      {
+       "speaker": "Dana Reyes (CEO)",
+       "start": "01:40",
+       "text": "Great question, Priya. We believe part of the impact is temporary while licenses are reviewed, and we are already in conversations to reallocate supply. However, we are being cautious in our guidance until we have more clarity."
+      }
+     ],
+     "slides": [
+      {
+       "timestamp": "00:00",
+       "title": "Q3 FY2026 Results",
+       "description": "Opening title slide presenting top-level quarterly performance metrics and speaker information.",
+       "figures": [
+        {
+         "fact": "Record revenue",
+         "value": "$4.2B (+31% YoY)",
+         "page": null
+        },
+        {
+         "fact": "Data center revenue",
+         "value": "+44%",
+         "page": null
+        }
+       ]
+      },
+      {
+       "timestamp": "00:15",
+       "title": "Northwind Semiconductors Reports Third Quarter Fiscal 2026 Results",
+       "description": "Earnings press release summary detailing Q3 performance, financial condition, forward outlook, and key operational risk factors.",
+       "figures": [
+        {
+         "fact": "Q3 revenue",
+         "value": "$4.2 billion (+31% YoY)",
+         "page": null
+        },
+        {
+         "fact": "Data center revenue",
+         "value": "$2.94 billion (+44% YoY)",
+         "page": null
+        },
+        {
+         "fact": "Gross margin",
+         "value": "61.5% (-1.2 pts sequentially)",
+         "page": null
+        },
+        {
+         "fact": "Operating income",
+         "value": "$1.3 billion",
+         "page": null
+        },
+        {
+         "fact": "Diluted earnings per share",
+         "value": "$1.12",
+         "page": null
+        },
+        {
+         "fact": "Cash and cash equivalents",
+         "value": "$5.8 billion",
+         "page": null
+        }
+       ]
+      },
+      {
+       "timestamp": "00:46",
+       "title": "Condensed Consolidated Statement of Income (unaudited, $ millions)",
+       "description": "Multi-quarter consolidated income statement table alongside a quarterly revenue trend bar chart.",
+       "figures": [
+        {
+         "fact": "Revenue (Q3 FY2026)",
+         "value": "$4,200M",
+         "page": null
+        },
+        {
+         "fact": "Data center revenue (Q3 FY2026)",
+         "value": "$2,940M",
+         "page": null
+        },
+        {
+         "fact": "Gross margin (Q3 FY2026)",
+         "value": "61.5%",
+         "page": null
+        },
+        {
+         "fact": "Operating income (Q3 FY2026)",
+         "value": "$1,302M",
+         "page": null
+        },
+        {
+         "fact": "Net income (Q3 FY2026)",
+         "value": "$1,071M",
+         "page": null
+        },
+        {
+         "fact": "Diluted EPS (Q3 FY2026)",
+         "value": "$1.12",
+         "page": null
+        }
+       ]
+      },
+      {
+       "timestamp": "01:20",
+       "title": "Q4 FY2026 Outlook",
+       "description": "Fourth quarter guidance slide detailing projected revenue, export headwind, gross margin expectations, capital returns, and customer concentration.",
+       "figures": [
+        {
+         "fact": "Q4 Revenue guidance",
+         "value": "$4.0B - $4.2B",
+         "page": null
+        },
+        {
+         "fact": "Estimated impact from new export licences",
+         "value": "~$300M",
+         "page": null
+        },
+        {
+         "fact": "Gross margin outlook",
+         "value": "~60%",
+         "page": null
+        },
+        {
+         "fact": "New share repurchase program",
+         "value": "$1.0B",
+         "page": null
+        },
+        {
+         "fact": "Largest customer share of revenue",
+         "value": "22%",
+         "page": null
+        }
+       ]
+      }
+     ],
+     "key_points": [
+      "Q3 FY2026 revenue grew 31% year-over-year to a record $4.2 billion ($4,200M).",
+      "Data center accelerator revenue increased 44% year-over-year to $2.94 billion, representing 70% of corporate revenue.",
+      "Gross margin contracted 1.2 percentage points sequentially to 61.5% due to higher packaging costs.",
+      "Operating income reached $1.302 billion and net income was $1.071 billion, generating diluted EPS of $1.12.",
+      "Strong balance sheet liquidity with $5.8 billion in cash against $2.1 billion of long-term debt.",
+      "The Board approved a new $1.0 billion share repurchase program."
+     ],
+     "guidance": [
+      "Q4 FY2026 revenue is expected to be between $4.0 billion and $4.2 billion.",
+      "Q4 revenue guidance incorporates an estimated ~$300 million negative impact from new export license requirements.",
+      "Q4 FY2026 gross margin is expected to be approximately 60%."
+     ],
+     "management_tone": "cautious",
+     "risks": [
+      "New export license requirements for advanced chip shipments to specific regions will negatively impact Q4 revenue by ~$300 million.",
+      "High customer concentration risk, with the single largest cloud customer contributing 22% of corporate revenue.",
+      "Gross margin pressure driven by higher packaging costs and advanced packaging industry capacity constraints."
+     ],
+     "notable_quotes": [
+      "Data center revenue grew 44% and now represents 70% of our business.",
+      "However, we are being cautious in our guidance until we have more clarity.",
+      "We believe part of the impact is temporary while licenses are reviewed, and we are already in conversations to reallocate supply."
+     ],
+     "source_id": "src_video_up_demo_video"
+    }
+   ],
+   "sources": [
+    {
+     "id": "src_video_up_demo_video",
+     "title": "northwind_webinar.mp4",
+     "publisher": "Your upload",
+     "url": null,
+     "published_at": null,
+     "retrieved_at": "2026-10-05T14:20:05.627406+00:00",
+     "source_type": "video",
+     "relevance": 0.9,
+     "provider": "user_upload",
+     "tags": []
+    }
+   ],
+   "agent_runs": [
+    {
+     "agent": "orchestrator",
+     "status": "completed",
+     "summary": "Assembled research team: video, sentiment, event_detection, risk",
+     "started_at": "2026-10-05T14:19:26.485194+00:00",
+     "finished_at": "2026-10-05T14:19:30.779985+00:00",
+     "duration_ms": 4292
+    },
+    {
+     "agent": "video",
+     "status": "completed",
+     "summary": "Analysed 1 video(s): 7 speech segments and 4 slides/charts",
+     "started_at": "2026-10-05T14:19:30.795624+00:00",
+     "finished_at": "2026-10-05T14:20:05.630127+00:00",
+     "duration_ms": 34831
+    },
+    {
+     "agent": "event_detection",
+     "status": "completed",
+     "summary": "Built a timeline of 1 events",
+     "started_at": "2026-10-05T14:20:05.634377+00:00",
+     "finished_at": "2026-10-05T14:20:05.637389+00:00",
+     "duration_ms": 1
+    },
+    {
+     "agent": "sentiment",
+     "status": "completed",
+     "summary": "Sentiment negative; evidence confidence low",
+     "started_at": "2026-10-05T14:20:05.640387+00:00",
+     "finished_at": "2026-10-05T14:20:05.642623+00:00",
+     "duration_ms": 0
+    },
+    {
+     "agent": "risk",
+     "status": "completed",
+     "summary": "Identified 3 risk themes (0 high)",
+     "started_at": "2026-10-05T14:20:05.645749+00:00",
+     "finished_at": "2026-10-05T14:20:09.696748+00:00",
+     "duration_ms": 4048
+    },
+    {
+     "agent": "evidence",
+     "status": "completed",
+     "summary": "Cross-checked 1 supporting sources; scored 1 likely drivers",
+     "started_at": "2026-10-05T14:20:09.702756+00:00",
+     "finished_at": "2026-10-05T14:20:09.708751+00:00",
+     "duration_ms": 0
+    },
+    {
+     "agent": "synthesis",
+     "status": "completed",
+     "summary": "Generated final explanation",
+     "started_at": "2026-10-05T14:20:09.714757+00:00",
+     "finished_at": "2026-10-05T14:20:23.031563+00:00",
+     "duration_ms": 13311
+    }
+   ],
+   "model_usage": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-6-luna",
+     "purpose": "plan",
+     "agent": "orchestrator",
+     "input_tokens": 689,
+     "output_tokens": 223,
+     "latency_ms": 4291,
+     "cost_usd": 0.0001804,
+     "ok": true
+    },
+    {
+     "provider": "Google",
+     "model": "google/gemini-3.8-flash",
+     "purpose": "video_analysis",
+     "agent": "video",
+     "input_tokens": 14208,
+     "output_tokens": 4966,
+     "latency_ms": 34793,
+     "cost_usd": 0.0292785,
+     "ok": true
+    },
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-6-luna",
+     "purpose": "risk_assessment",
+     "agent": "risk",
+     "input_tokens": 1917,
+     "output_tokens": 288,
+     "latency_ms": 4039,
+     "cost_usd": 0.00038355,
+     "ok": true
+    },
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-6-luna",
+     "purpose": "synthesis",
+     "agent": "synthesis",
+     "input_tokens": 2955,
+     "output_tokens": 1484,
+     "latency_ms": 13273,
+     "cost_usd": 0.000973875,
+     "ok": true
+    },
+    {
+     "provider": "openrouter",
+     "model": "gemini-embedding-2",
+     "purpose": "embedding_text",
+     "agent": "search",
+     "input_tokens": 1983,
+     "output_tokens": null,
+     "latency_ms": 1099,
+     "cost_usd": 0.0003966,
+     "ok": true
+    }
+   ],
+   "warnings": [],
+   "ai_narrative_available": true,
+   "generated_at": "2026-10-05T14:20:23.034559+00:00",
+   "disclaimer": "SignalRoom is an educational financial research prototype. Its analysis is generated from available data and AI models and may contain errors. It does not provide personalized investment advice, execute trades, or guarantee the accuracy or completeness of market information."
+  },
+  "summary": "Northwind Semiconductors reported record Q3 FY2026 revenue of $4.2 billion, up 31% year over year, with data center accelerators growing 44% and contributing 70% of revenue. Diluted EPS was $1.12. Management guided Q4 revenue to $4.0\u2013$4.2 billion and gross margin to approximately 60%, citing an estimated $300 million export-license impact and ongoing packaging-cost pressure. Risks highlighted incl",
+  "error": null,
+  "audio_status": "none",
+  "infographic_status": "none",
+  "followups": [],
+  "attempts": 1,
+  "created_at": "2026-10-05T14:19:26.441798+00:00",
+  "updated_at": "2026-10-05T14:20:24.168499+00:00",
+  "completed_at": "2026-10-05T14:20:24.168499+00:00"
+ },
+ "events": [
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791209966455128,
+   "timestamp": "2026-10-05T14:19:26.455128+00:00",
+   "event_type": "running",
+   "message": "SignalRoom is assembling your research team...",
+   "agent": "orchestrator",
+   "progress": 0,
+   "status": "running",
+   "metadata": {}
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791209966484179,
+   "timestamp": "2026-10-05T14:19:26.484179+00:00",
+   "event_type": "planning",
+   "message": "Orchestrator started",
+   "agent": "orchestrator",
+   "progress": 0,
+   "status": "running",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791209970778675,
+   "timestamp": "2026-10-05T14:19:30.778675+00:00",
+   "event_type": "planning",
+   "message": "Assembled research team: video, sentiment, event_detection, risk",
+   "agent": "orchestrator",
+   "progress": 27,
+   "status": "running",
+   "metadata": {
+    "phase": "completed",
+    "label": "Orchestrator",
+    "duration_ms": 4292
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791209970793612,
+   "timestamp": "2026-10-05T14:19:30.793612+00:00",
+   "event_type": "video",
+   "message": "Video Agent started",
+   "agent": "video",
+   "progress": 27,
+   "status": "collecting_data",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791210005628996,
+   "timestamp": "2026-10-05T14:20:05.628464+00:00",
+   "event_type": "video",
+   "message": "Analysed 1 video(s): 7 speech segments and 4 slides/charts",
+   "agent": "video",
+   "progress": 40,
+   "status": "collecting_data",
+   "metadata": {
+    "phase": "completed",
+    "label": "Video Agent",
+    "duration_ms": 34831
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791210005632870,
+   "timestamp": "2026-10-05T14:20:05.632870+00:00",
+   "event_type": "events",
+   "message": "Event Detection Agent started",
+   "agent": "event_detection",
+   "progress": 40,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791210005636388,
+   "timestamp": "2026-10-05T14:20:05.636388+00:00",
+   "event_type": "events",
+   "message": "Built a timeline of 1 events",
+   "agent": "event_detection",
+   "progress": 54,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "completed",
+    "label": "Event Detection Agent",
+    "duration_ms": 1
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791210005639388,
+   "timestamp": "2026-10-05T14:20:05.639388+00:00",
+   "event_type": "sentiment",
+   "message": "Sentiment Agent started",
+   "agent": "sentiment",
+   "progress": 54,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791210005641522,
+   "timestamp": "2026-10-05T14:20:05.641522+00:00",
+   "event_type": "sentiment",
+   "message": "Sentiment negative; evidence confidence low",
+   "agent": "sentiment",
+   "progress": 67,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "completed",
+    "label": "Sentiment Agent",
+    "duration_ms": 0
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791210005644662,
+   "timestamp": "2026-10-05T14:20:05.644662+00:00",
+   "event_type": "risk",
+   "message": "Risk Agent started",
+   "agent": "risk",
+   "progress": 67,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791210009694759,
+   "timestamp": "2026-10-05T14:20:09.694759+00:00",
+   "event_type": "risk",
+   "message": "Identified 3 risk themes (0 high)",
+   "agent": "risk",
+   "progress": 81,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "completed",
+    "label": "Risk Agent",
+    "duration_ms": 4048
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791210009699750,
+   "timestamp": "2026-10-05T14:20:09.699750+00:00",
+   "event_type": "evidence",
+   "message": "Evidence Agent started",
+   "agent": "evidence",
+   "progress": 81,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791210009704744,
+   "timestamp": "2026-10-05T14:20:09.704744+00:00",
+   "event_type": "evidence",
+   "message": "Cross-checked 1 supporting sources; scored 1 likely drivers",
+   "agent": "evidence",
+   "progress": 95,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "completed",
+    "label": "Evidence Agent",
+    "duration_ms": 0
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791210009712760,
+   "timestamp": "2026-10-05T14:20:09.712760+00:00",
+   "event_type": "synthesis",
+   "message": "Synthesis Agent started",
+   "agent": "synthesis",
+   "progress": 95,
+   "status": "synthesizing",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791210023028566,
+   "timestamp": "2026-10-05T14:20:23.028566+00:00",
+   "event_type": "synthesis",
+   "message": "Generated final explanation",
+   "agent": "synthesis",
+   "progress": 95,
+   "status": "synthesizing",
+   "metadata": {
+    "phase": "completed",
+    "label": "Synthesis Agent",
+    "duration_ms": 13311
+   }
+  },
+  {
+   "investigation_id": "demo_webinar",
+   "seq": 1791210024170499,
+   "timestamp": "2026-10-05T14:20:24.170499+00:00",
+   "event_type": "completed",
+   "message": "Investigation complete",
+   "agent": null,
+   "progress": 100,
+   "status": "completed",
+   "metadata": {
+    "cost_usd": 0.030816,
+    "model_calls": 4
+   }
+  }
+ ],
+ "transcript": {
+  "language": "en",
+  "speakers": [
+   "Operator",
+   "Dana Reyes (CEO)",
+   "Marcus Lin (CFO)",
+   "Priya (Analyst)"
+  ],
+  "segments": [
+   {
+    "speaker": "Operator",
+    "start": "00:00",
+    "text": "Good afternoon, and welcome to the Northwind Semiconductors third quarter fiscal 2026 earnings call. Today's call contains forward-looking statements, and actual results may differ materially. I will now hand the call over to our Chief Executive Officer, Dana Reyes."
+   },
+   {
+    "speaker": "Dana Reyes (CEO)",
+    "start": "00:15",
+    "text": "Thank you, and good afternoon everyone. Northwind delivered record revenue of $4.2 billion this quarter, up 31% from a year ago, driven by demand for our data center accelerators. Data center revenue grew 44% and now represents 70% of our business. At the same time, I want to be transparent about two headwinds. First, new export license requirements for advanced chips shipping to certain regions will reduce our fourth-quarter revenue by an estimated $300 million. Second, our largest cloud customer accounted for 22% of revenue, so our concentration remains high."
+   },
+   {
+    "speaker": "Marcus Lin (CFO)",
+    "start": "00:56",
+    "text": "Thanks, Dana. Gross margin was 61.5%, down 1.2 points sequentially, mainly because of higher packaging costs. Operating income was $1.3 billion. We ended the quarter with $5.8 billion in cash and $2.1 billion of long-term debt."
+   },
+   {
+    "speaker": "Marcus Lin (CFO)",
+    "start": "01:14",
+    "text": "For the fourth quarter, we expect revenue of $4.0 to $4.2 billion, which includes the impact of the export restrictions, and gross margin of approximately 60%. We are also announcing a new $1 billion share repurchase program."
+   },
+   {
+    "speaker": "Priya (Analyst)",
+    "start": "01:30",
+    "text": "Thanks for taking my question. Can you quantify how much of the guidance reduction is temporary and whether you can redirect that supply to other customers?"
+   },
+   {
+    "speaker": "Dana Reyes (CEO)",
+    "start": "01:40",
+    "text": "Great question, Priya. We believe part of the impact is temporary while licenses are reviewed, and we are already in conversations to reallocate supply. However, we are being cautious in our guidance until we have more clarity."
+   },
+   {
+    "speaker": "Operator",
+    "start": "01:54",
+    "text": "That concludes today's question and answer session. Thank you for participating. You may now disconnect."
+   }
+  ]
+ }
+}

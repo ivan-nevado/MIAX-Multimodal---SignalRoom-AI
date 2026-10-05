@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------- design tokens
+   Every color in the UI comes from these tokens (no hardcoded hex in components). */
+@theme {
+  --color-background: #08090d;
+  --color-surface: #101219;
+  --color-elevated: #171922;
+  --color-line: #262936;
+  --color-line-strong: #343848;
+
+  --color-primary: #8b5cf6;
+  --color-primary-soft: #a78bfa;
+  --color-accent: #ec4899;
+
+  --color-ink: #f5f5f7;
+  --color-ink-2: #a1a1aa;
+  --color-ink-3: #71717a;
+
+  --color-positive: #22c55e;
+  --color-negative: #ef4444;
+  --color-warning: #f59e0b;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 14px;
+
+  --animate-pulse-soft: pulse-soft 2.4s ease-in-out infinite;
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.45;
+    }
+  }
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+  body {
+    @apply bg-background text-ink font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 40%, transparent);
+  }
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+@utility gradient-text {
+  background: linear-gradient(90deg, var(--color-primary-soft), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility card {
+  @apply min-w-0 rounded-[var(--radius-card)] border border-line bg-surface;
+}
+
+@utility glow {
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--color-primary) 25%, transparent),
+    0 20px 60px -30px color-mix(in oklab, var(--color-primary) 60%, transparent);
+}
+
+/* React Flow dark tweaks */
+.react-flow__attribution {
+  display: none;
+}
+.react-flow__controls-button {
+  background: var(--color-elevated) !important;
+  border-color: var(--color-line) !important;
+  fill: var(--color-ink-2) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

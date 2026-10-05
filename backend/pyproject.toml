@@ -1,0 +1,37 @@
+[project]
+name = "signalroom-backend"
+version = "0.1.0"
+description = "SignalRoom AI — multimodal multi-agent financial intelligence backend"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["B008", "RUF012", "SIM108", "E501", "RUF001", "RUF002", "RUF003"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+check_untyped_defs = true
+no_implicit_optional = true
+plugins = ["pydantic.mypy"]
+exclude = ["^\\.venv/", "^tests/"]
+
+[[tool.mypy.overrides]]
+module = ["yfinance.*", "pypdfium2.*", "langgraph.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+  "live: hits real external services (OpenRouter, yfinance, SEC, GDELT). Run with RUN_LIVE_TESTS=1",
+]
+filterwarnings = ["ignore::DeprecationWarning"]

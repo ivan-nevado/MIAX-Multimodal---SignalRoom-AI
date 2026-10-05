@@ -1,0 +1,3830 @@
+{
+ "investigation": {
+  "investigation_id": "demo_nvda",
+  "symbol": "NVDA",
+  "asset_name": "NVIDIA Corporation",
+  "asset_type": "equity",
+  "question": "Why did NVIDIA move today?",
+  "status": "completed",
+  "progress": 100,
+  "current_agent": null,
+  "status_message": "Investigation complete",
+  "plan": {
+   "intent": "why_move",
+   "agents": [
+    "market",
+    "news",
+    "financial",
+    "macro",
+    "sentiment",
+    "event_detection",
+    "risk",
+    "evidence",
+    "synthesis"
+   ],
+   "rationale": "Market data and recent news can identify the move and potential catalysts; event detection and evidence will establish timing and assess which drivers are supported.",
+   "time_window_days": 1
+  },
+  "attachments": [],
+  "generate_audio": true,
+  "result": {
+   "symbol": "NVDA",
+   "asset_name": "NVIDIA Corporation",
+   "question": "Why did NVIDIA move today?",
+   "intent": "why_move",
+   "executive_summary": "NVIDIA rose 1.34% in the latest available market session, dated October 2, and outperformed the S&P 500. The supplied market data do not show an unusual move. Headlines published October 5 about AI demand, an expanded buyback plan and a higher BNP Paribas price target are possible supportive context, but they post-date that market session and cannot explain its move. The available data do not establish NVIDIA\u2019s October 5 share-price move.",
+   "what_happened": "The latest market metrics provided are for October 2: NVDA rose 1.34%, with volume 22.71% above its 20-session average, and its return exceeded the S&P 500 move by 0.61 percentage points. The move was not flagged as unusual. Several relevant headlines arrived on October 5, including positive-leaning reports about AI demand, a buyback-plan expansion and an analyst target increase, as well as a report of a lawsuit concerning the Groq licensing deal. Those later headlines may inform current sentiment but are not evidence of what drove the October 2 move.",
+   "drivers": [
+    {
+     "driver_id": "drv_market_pressure",
+     "name": "Broad market / sector pressure",
+     "category": "sector_move",
+     "explanation": "The S&P 500 also rose, which is consistent with a supportive broad-market backdrop rather than broad-market pressure. NVDA outperformed it by 0.61 percentage points; the data do not isolate a sector effect. Evidence-weighted contribution: 34.7% (a heuristic, not a probability).",
+     "contribution_score": 34.7,
+     "raw_score": 0.3269,
+     "components": {
+      "relevance": 0.327,
+      "source_support": 1.0,
+      "temporal_alignment": 1.0,
+      "sentiment_shift": 0.5
+     },
+     "evidence_ids": [
+      "src_mkt_nvda",
+      "src_mkt_gspc"
+     ]
+    },
+    {
+     "driver_id": "drv_cl_64243dc4febc",
+     "name": "Nvidia stock record and AI demand",
+     "category": "market_move",
+     "explanation": "Barron\u2019s reported that NVIDIA was set for a stock record as a key supplier celebrated booming AI demand. This is a possible supportive sentiment factor, but the item appeared October 5, after the latest market session provided. Evidence-weighted contribution: 23.8% (a heuristic, not a probability).",
+     "contribution_score": 23.8,
+     "raw_score": 0.223,
+     "components": {
+      "relevance": 0.993,
+      "source_support": 0.283,
+      "temporal_alignment": 0.634,
+      "sentiment_shift": 1.0
+     },
+     "evidence_ids": [
+      "yh_5ad46b7fc9e5"
+     ]
+    },
+    {
+     "driver_id": "drv_cl_81e9b46de6b9",
+     "name": "Nvidia expands share buyback plan",
+     "category": "other",
+     "explanation": "A 24/7 Wall St. headline reported that NVIDIA added $150 billion to its buyback plan, a possible supportive signal. The report appeared October 5, so it does not establish a reason for the October 2 move. Evidence-weighted contribution: 22.7% (a heuristic, not a probability).",
+     "contribution_score": 22.7,
+     "raw_score": 0.2128,
+     "components": {
+      "relevance": 0.996,
+      "source_support": 0.283,
+      "temporal_alignment": 0.628,
+      "sentiment_shift": 0.9
+     },
+     "evidence_ids": [
+      "yh_9c5a81eff96d"
+     ]
+    },
+    {
+     "driver_id": "drv_cl_40502350d164",
+     "name": "BNP Paribas raises Nvidia target",
+     "category": "analyst_action",
+     "explanation": "MT Newswires reported that BNP Paribas raised its NVIDIA price target to $345 from $285 and kept its Outperform rating. This is a possible positive sentiment factor, but the report was published October 5, after the latest market session provided. Evidence-weighted contribution: 18.8% (a heuristic, not a probability).",
+     "contribution_score": 18.8,
+     "raw_score": 0.176,
+     "components": {
+      "relevance": 0.798,
+      "source_support": 0.283,
+      "temporal_alignment": 0.623,
+      "sentiment_shift": 1.0
+     },
+     "evidence_ids": [
+      "yh_d90b79f54d2c"
+     ]
+    }
+   ],
+   "market_context": "On October 2, the S&P 500 rose 0.73% and the Nasdaq Composite rose 1.19%; NVDA gained 1.34%. NVDA\u2019s latest-session z-score was 0.46 and its anomaly score was 0.141, with unusual_move marked false. These daily-bar metrics do not show intraday sequencing, and the latest supplied NVDA session predates the October 5 headlines.",
+   "financial_context": "NVIDIA reported quarterly revenue of $96.22B for the period ended July 26, 2026, up 105.8% year over year and 17.9% quarter over quarter. Reported operating margin was 66.2% and net margin was 62.0%; cash was $22.44B and debt was $33.37B. These figures provide business context but do not identify the cause of the latest share-price move.",
+   "sentiment_summary": "The supplied sentiment label is positive, with mixed agreement and medium evidence confidence. Positive-leaning headlines concern AI demand, the buyback plan and an analyst target increase; a separate report describes a lawsuit tied to the Groq licensing deal.",
+   "risk_summary": "A report says NVIDIA\u2019s $20 billion Groq licensing deal faces a lawsuit from engineers described as jilted. This could create uncertainty around the agreement, but the available report does not establish an operational disruption. The available evidence does not quantify any effect on NVIDIA\u2019s share price.",
+   "what_to_watch": [
+    "The next available NVDA market session and whether its move aligns with the October 5 headlines.",
+    "Further reporting or filings about the lawsuit concerning the Groq licensing deal.",
+    "Any additional company information clarifying the reported buyback-plan expansion.",
+    "Whether subsequent reporting or company updates support the reported AI-demand outlook."
+   ],
+   "uncertainties": [
+    "The latest supplied market metrics are dated October 2, while the cited headlines are dated October 5; no October 5 NVDA price move is provided.",
+    "The news clusters each cite one independent publisher, and the available items do not establish that the news likely drove a share-price move.",
+    "Daily market data do not reveal intraday sequencing; relative performance uses only the S&P 500 benchmark.",
+    "A data-provider warning says GDELT was unavailable."
+   ],
+   "claims": [
+    {
+     "claim_id": "c_move",
+     "claim": "NVDA rose 1.34% in the latest session (2026-10-02).",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "src_mkt_nvda"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "high"
+    },
+    {
+     "claim_id": "c_volume",
+     "claim": "Volume was +23% versus its 20-session average.",
+     "claim_type": "derived_metric",
+     "evidence_ids": [
+      "src_mkt_nvda"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "high"
+    },
+    {
+     "claim_id": "c_zscore",
+     "claim": "The move is +0.5 standard deviations versus the prior 60 sessions.",
+     "claim_type": "derived_metric",
+     "evidence_ids": [
+      "src_mkt_nvda"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "high"
+    },
+    {
+     "claim_id": "c_d9d74b3c4859",
+     "claim": "Lawsuit over Groq licensing deal: The Financial Times reports that Nvidia\u2019s $20 billion licensing deal with Groq faces a lawsuit from engineers described as jilted.",
+     "claim_type": "interpretation",
+     "evidence_ids": [
+      "yh_d082f03654aa"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "c_c31c0753f2d1",
+     "claim": "Nvidia expands share buyback plan: A headline reports that Nvidia added $150 billion to its buyback plan; it also discusses Social Security tax implications of IRA withdrawals.",
+     "claim_type": "interpretation",
+     "evidence_ids": [
+      "yh_9c5a81eff96d"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "c_f21d1392a9bb",
+     "claim": "Nvidia stock record and AI demand: Barron\u2019s reports Nvidia is set for a stock record as a key supplier celebrates booming AI demand.",
+     "claim_type": "interpretation",
+     "evidence_ids": [
+      "yh_5ad46b7fc9e5"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "c_eaddd58e4aab",
+     "claim": "BNP Paribas raises Nvidia target: BNP Paribas raised its Nvidia price target to $345 from $285 and kept its Outperform rating, according to MT Newswires.",
+     "claim_type": "interpretation",
+     "evidence_ids": [
+      "yh_d90b79f54d2c"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "c_382e683f4576",
+     "claim": "Nvidia stock scenarios for 2030: The Motley Fool outlines three possible scenarios for Nvidia stock in 2030.",
+     "claim_type": "interpretation",
+     "evidence_ids": [
+      "yh_0d3203421d95"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "cs_d6d3e5403d53",
+     "claim": "NVDA rose 1.34% in the latest supplied session, dated October 2, 2026.",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "src_mkt_nvda"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "cs_4d531a297364",
+     "claim": "NVDA outperformed the S&P 500 by 0.61 percentage points in that session; the S&P 500 rose 0.73%.",
+     "claim_type": "derived_metric",
+     "evidence_ids": [
+      "src_mkt_nvda",
+      "src_mkt_gspc"
+     ],
+     "source_count": 2,
+     "evidence_confidence": "medium"
+    },
+    {
+     "claim_id": "cs_e780bd4c6bf0",
+     "claim": "The latest session was not flagged as unusual, with unusual_move marked false and a z-score of 0.46.",
+     "claim_type": "derived_metric",
+     "evidence_ids": [
+      "src_mkt_nvda"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "cs_79f29bba325d",
+     "claim": "Barron\u2019s reported on October 5 that NVIDIA was set for a stock record as a key supplier celebrated booming AI demand.",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "yh_5ad46b7fc9e5"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "cs_2461d31552d3",
+     "claim": "A 24/7 Wall St. headline reported that NVIDIA added $150 billion to its buyback plan.",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "yh_9c5a81eff96d"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "cs_b139b8e64055",
+     "claim": "MT Newswires reported that BNP Paribas raised its price target to $345 from $285 and kept its Outperform rating.",
+     "claim_type": "observed_fact",
+     "evidence_ids": [
+      "yh_d90b79f54d2c"
+     ],
+     "source_count": 1,
+     "evidence_confidence": "low"
+    },
+    {
+     "claim_id": "cs_d84b7a00ca37",
+     "claim": "Because the cited October 5 headlines post-date the latest supplied market session, they cannot establish the cause of the October 2 move.",
+     "claim_type": "interpretation",
+     "evidence_ids": [
+      "src_mkt_nvda",
+      "yh_5ad46b7fc9e5",
+      "yh_9c5a81eff96d",
+      "yh_d90b79f54d2c"
+     ],
+     "source_count": 4,
+     "evidence_confidence": "medium"
+    }
+   ],
+   "market": {
+    "metrics": {
+     "symbol": "NVDA",
+     "currency": "USD",
+     "as_of": "2026-10-02",
+     "last_price": 233.95,
+     "previous_close": 230.86,
+     "move_pct": 1.34,
+     "return_5d_pct": 3.95,
+     "return_1m_pct": 4.25,
+     "volume": 134914600.0,
+     "avg_volume_20d": 109941645.0,
+     "volume_change_pct": 22.71,
+     "volatility_20d": 0.248,
+     "drawdown_30d": -8.42,
+     "zscore_move": 0.46,
+     "anomaly_score": 0.141,
+     "ma_20": 223.786,
+     "ma_50": 218.2782,
+     "day_high": 237.88,
+     "day_low": 233.6,
+     "benchmark_symbol": "^GSPC",
+     "benchmark_move_pct": 0.73,
+     "relative_performance_pct": 0.61,
+     "unusual_move": false,
+     "observations": [
+      "NVDA rose 1.34% in the latest session.",
+      "It outperformed its benchmark (^GSPC) by 0.61 pp.",
+      "Price is above its 50-session moving average."
+     ]
+    },
+    "history": [
+     {
+      "time": "2026-04-06",
+      "open": 177.160004,
+      "high": 177.789993,
+      "low": 175.759995,
+      "close": 177.639999,
+      "volume": 107564300.0
+     },
+     {
+      "time": "2026-04-07",
+      "open": 175.729996,
+      "high": 178.229996,
+      "low": 173.660004,
+      "close": 178.100006,
+      "volume": 132534900.0
+     },
+     {
+      "time": "2026-04-08",
+      "open": 184.5,
+      "high": 185.259995,
+      "low": 180.300003,
+      "close": 182.080002,
+      "volume": 147732700.0
+     },
+     {
+      "time": "2026-04-09",
+      "open": 181.839996,
+      "high": 184.080002,
+      "low": 180.619995,
+      "close": 183.910004,
+      "volume": 116428500.0
+     },
+     {
+      "time": "2026-04-10",
+      "open": 184.309998,
+      "high": 190.0,
+      "low": 184.300003,
+      "close": 188.630005,
+      "volume": 160459500.0
+     },
+     {
+      "time": "2026-04-13",
+      "open": 186.029999,
+      "high": 189.660004,
+      "low": 185.740005,
+      "close": 189.309998,
+      "volume": 133648200.0
+     },
+     {
+      "time": "2026-04-14",
+      "open": 190.839996,
+      "high": 196.509995,
+      "low": 190.770004,
+      "close": 196.509995,
+      "volume": 161307000.0
+     },
+     {
+      "time": "2026-04-15",
+      "open": 196.539993,
+      "high": 200.399994,
+      "low": 195.740005,
+      "close": 198.869995,
+      "volume": 185338400.0
+     },
+     {
+      "time": "2026-04-16",
+      "open": 197.429993,
+      "high": 199.850006,
+      "low": 195.809998,
+      "close": 198.350006,
+      "volume": 134012900.0
+     },
+     {
+      "time": "2026-04-17",
+      "open": 199.899994,
+      "high": 201.699997,
+      "low": 199.270004,
+      "close": 201.679993,
+      "volume": 160324400.0
+     },
+     {
+      "time": "2026-04-20",
+      "open": 199.979996,
+      "high": 202.169998,
+      "low": 197.839996,
+      "close": 202.059998,
+      "volume": 119381400.0
+     },
+     {
+      "time": "2026-04-21",
+      "open": 202.130005,
+      "high": 202.75,
+      "low": 199.0,
+      "close": 199.880005,
+      "volume": 107945300.0
+     },
+     {
+      "time": "2026-04-22",
+      "open": 200.990005,
+      "high": 202.5,
+      "low": 199.0,
+      "close": 202.5,
+      "volume": 107501000.0
+     },
+     {
+      "time": "2026-04-23",
+      "open": 202.460007,
+      "high": 203.830002,
+      "low": 197.220001,
+      "close": 199.639999,
+      "volume": 113561800.0
+     },
+     {
+      "time": "2026-04-24",
+      "open": 199.960007,
+      "high": 210.949997,
+      "low": 199.809998,
+      "close": 208.270004,
+      "volume": 214134400.0
+     },
+     {
+      "time": "2026-04-27",
+      "open": 209.649994,
+      "high": 216.830002,
+      "low": 207.380005,
+      "close": 216.610001,
+      "volume": 187172400.0
+     },
+     {
+      "time": "2026-04-28",
+      "open": 209.490005,
+      "high": 214.729996,
+      "low": 208.199997,
+      "close": 213.169998,
+      "volume": 180275400.0
+     },
+     {
+      "time": "2026-04-29",
+      "open": 212.699997,
+      "high": 212.720001,
+      "low": 207.580002,
+      "close": 209.25,
+      "volume": 123711800.0
+     },
+     {
+      "time": "2026-04-30",
+      "open": 209.929993,
+      "high": 210.300003,
+      "low": 198.699997,
+      "close": 199.570007,
+      "volume": 225239200.0
+     },
+     {
+      "time": "2026-05-01",
+      "open": 201.279999,
+      "high": 203.0,
+      "low": 197.119995,
+      "close": 198.449997,
+      "volume": 128647000.0
+     },
+     {
+      "time": "2026-05-04",
+      "open": 199.5,
+      "high": 201.729996,
+      "low": 194.740005,
+      "close": 198.479996,
+      "volume": 125368100.0
+     },
+     {
+      "time": "2026-05-05",
+      "open": 199.300003,
+      "high": 200.240005,
+      "low": 196.029999,
+      "close": 196.5,
+      "volume": 113406600.0
+     },
+     {
+      "time": "2026-05-06",
+      "open": 199.889999,
+      "high": 208.270004,
+      "low": 198.610001,
+      "close": 207.830002,
+      "volume": 188362800.0
+     },
+     {
+      "time": "2026-05-07",
+      "open": 208.339996,
+      "high": 214.199997,
+      "low": 206.5,
+      "close": 211.5,
+      "volume": 168307900.0
+     },
+     {
+      "time": "2026-05-08",
+      "open": 213.029999,
+      "high": 217.800003,
+      "low": 212.889999,
+      "close": 215.199997,
+      "volume": 136421400.0
+     },
+     {
+      "time": "2026-05-11",
+      "open": 214.039993,
+      "high": 222.300003,
+      "low": 213.889999,
+      "close": 219.440002,
+      "volume": 160685800.0
+     },
+     {
+      "time": "2026-05-12",
+      "open": 218.550003,
+      "high": 223.75,
+      "low": 214.919998,
+      "close": 220.779999,
+      "volume": 159176600.0
+     },
+     {
+      "time": "2026-05-13",
+      "open": 224.929993,
+      "high": 227.839996,
+      "low": 221.570007,
+      "close": 225.830002,
+      "volume": 150405400.0
+     },
+     {
+      "time": "2026-05-14",
+      "open": 229.850006,
+      "high": 236.539993,
+      "low": 229.300003,
+      "close": 235.740005,
+      "volume": 180782900.0
+     },
+     {
+      "time": "2026-05-15",
+      "open": 229.759995,
+      "high": 231.5,
+      "low": 224.240005,
+      "close": 225.320007,
+      "volume": 180977600.0
+     },
+     {
+      "time": "2026-05-18",
+      "open": 229.869995,
+      "high": 230.0,
+      "low": 218.369995,
+      "close": 222.320007,
+      "volume": 146280900.0
+     },
+     {
+      "time": "2026-05-19",
+      "open": 219.619995,
+      "high": 224.479996,
+      "low": 217.910004,
+      "close": 220.610001,
+      "volume": 140948200.0
+     },
+     {
+      "time": "2026-05-20",
+      "open": 223.179993,
+      "high": 226.130005,
+      "low": 220.5,
+      "close": 223.470001,
+      "volume": 184201600.0
+     },
+     {
+      "time": "2026-05-21",
+      "open": 222.289993,
+      "high": 227.399994,
+      "low": 217.929993,
+      "close": 219.509995,
+      "volume": 203381800.0
+     },
+     {
+      "time": "2026-05-22",
+      "open": 220.899994,
+      "high": 221.009995,
+      "low": 214.800003,
+      "close": 215.330002,
+      "volume": 169275700.0
+     },
+     {
+      "time": "2026-05-26",
+      "open": 216.539993,
+      "high": 218.179993,
+      "low": 212.0,
+      "close": 214.860001,
+      "volume": 187202600.0
+     },
+     {
+      "time": "2026-05-27",
+      "open": 214.119995,
+      "high": 214.149994,
+      "low": 208.779999,
+      "close": 212.600006,
+      "volume": 167601200.0
+     },
+     {
+      "time": "2026-05-28",
+      "open": 211.279999,
+      "high": 215.520004,
+      "low": 211.220001,
+      "close": 214.25,
+      "volume": 143996000.0
+     },
+     {
+      "time": "2026-05-29",
+      "open": 214.580002,
+      "high": 217.860001,
+      "low": 211.130005,
+      "close": 211.139999,
+      "volume": 289410600.0
+     },
+     {
+      "time": "2026-06-01",
+      "open": 215.729996,
+      "high": 224.869995,
+      "low": 215.699997,
+      "close": 224.360001,
+      "volume": 212850700.0
+     },
+     {
+      "time": "2026-06-02",
+      "open": 227.179993,
+      "high": 232.279999,
+      "low": 221.350006,
+      "close": 222.820007,
+      "volume": 193362900.0
+     },
+     {
+      "time": "2026-06-03",
+      "open": 221.720001,
+      "high": 222.820007,
+      "low": 214.509995,
+      "close": 214.75,
+      "volume": 160907000.0
+     },
+     {
+      "time": "2026-06-04",
+      "open": 213.910004,
+      "high": 221.600006,
+      "low": 210.970001,
+      "close": 218.660004,
+      "volume": 169022200.0
+     },
+     {
+      "time": "2026-06-05",
+      "open": 214.529999,
+      "high": 214.869995,
+      "low": 204.330002,
+      "close": 205.100006,
+      "volume": 219655500.0
+     },
+     {
+      "time": "2026-06-08",
+      "open": 210.179993,
+      "high": 210.470001,
+      "low": 206.0,
+      "close": 208.639999,
+      "volume": 138372800.0
+     },
+     {
+      "time": "2026-06-09",
+      "open": 210.619995,
+      "high": 211.399994,
+      "low": 199.339996,
+      "close": 208.190002,
+      "volume": 180962500.0
+     },
+     {
+      "time": "2026-06-10",
+      "open": 204.429993,
+      "high": 207.220001,
+      "low": 199.919998,
+      "close": 200.419998,
+      "volume": 161746600.0
+     },
+     {
+      "time": "2026-06-11",
+      "open": 201.490005,
+      "high": 205.660004,
+      "low": 199.539993,
+      "close": 204.869995,
+      "volume": 158643200.0
+     },
+     {
+      "time": "2026-06-12",
+      "open": 204.860001,
+      "high": 207.070007,
+      "low": 203.440002,
+      "close": 205.190002,
+      "volume": 112001800.0
+     },
+     {
+      "time": "2026-06-15",
+      "open": 208.919998,
+      "high": 212.710007,
+      "low": 208.339996,
+      "close": 212.449997,
+      "volume": 149936700.0
+     },
+     {
+      "time": "2026-06-16",
+      "open": 211.179993,
+      "high": 211.490005,
+      "low": 207.289993,
+      "close": 207.410004,
+      "volume": 125694100.0
+     },
+     {
+      "time": "2026-06-17",
+      "open": 208.529999,
+      "high": 209.210007,
+      "low": 203.080002,
+      "close": 204.649994,
+      "volume": 128363500.0
+     },
+     {
+      "time": "2026-06-18",
+      "open": 207.330002,
+      "high": 211.389999,
+      "low": 206.5,
+      "close": 210.690002,
+      "volume": 241272000.0
+     },
+     {
+      "time": "2026-06-22",
+      "open": 211.440002,
+      "high": 213.990005,
+      "low": 207.720001,
+      "close": 208.649994,
+      "volume": 122041400.0
+     },
+     {
+      "time": "2026-06-23",
+      "open": 202.169998,
+      "high": 203.770004,
+      "low": 200.0,
+      "close": 200.039993,
+      "volume": 153496200.0
+     },
+     {
+      "time": "2026-06-24",
+      "open": 200.119995,
+      "high": 201.669998,
+      "low": 196.580002,
+      "close": 199.0,
+      "volume": 151810700.0
+     },
+     {
+      "time": "2026-06-25",
+      "open": 200.080002,
+      "high": 200.800003,
+      "low": 192.130005,
+      "close": 195.740005,
+      "volume": 149550000.0
+     },
+     {
+      "time": "2026-06-26",
+      "open": 193.119995,
+      "high": 195.550003,
+      "low": 191.220001,
+      "close": 192.529999,
+      "volume": 179304100.0
+     },
+     {
+      "time": "2026-06-29",
+      "open": 193.850006,
+      "high": 196.179993,
+      "low": 189.800003,
+      "close": 194.970001,
+      "volume": 148835700.0
+     },
+     {
+      "time": "2026-06-30",
+      "open": 197.240005,
+      "high": 200.630005,
+      "low": 195.110001,
+      "close": 200.089996,
+      "volume": 166476700.0
+     },
+     {
+      "time": "2026-07-01",
+      "open": 196.199997,
+      "high": 199.850006,
+      "low": 193.449997,
+      "close": 197.580002,
+      "volume": 146147600.0
+     },
+     {
+      "time": "2026-07-02",
+      "open": 197.139999,
+      "high": 200.059998,
+      "low": 192.350006,
+      "close": 194.830002,
+      "volume": 142068700.0
+     },
+     {
+      "time": "2026-07-06",
+      "open": 194.419998,
+      "high": 197.550003,
+      "low": 193.990005,
+      "close": 195.550003,
+      "volume": 108999000.0
+     },
+     {
+      "time": "2026-07-07",
+      "open": 192.369995,
+      "high": 198.410004,
+      "low": 191.139999,
+      "close": 196.929993,
+      "volume": 124154600.0
+     },
+     {
+      "time": "2026-07-08",
+      "open": 195.179993,
+      "high": 205.160004,
+      "low": 195.059998,
+      "close": 204.119995,
+      "volume": 147419100.0
+     },
+     {
+      "time": "2026-07-09",
+      "open": 204.460007,
+      "high": 204.589996,
+      "low": 198.960007,
+      "close": 202.779999,
+      "volume": 132037400.0
+     },
+     {
+      "time": "2026-07-10",
+      "open": 202.0,
+      "high": 211.0,
+      "low": 201.919998,
+      "close": 210.960007,
+      "volume": 148421000.0
+     },
+     {
+      "time": "2026-07-13",
+      "open": 208.539993,
+      "high": 210.570007,
+      "low": 203.0,
+      "close": 203.529999,
+      "volume": 121411000.0
+     },
+     {
+      "time": "2026-07-14",
+      "open": 208.199997,
+      "high": 212.550003,
+      "low": 203.800003,
+      "close": 211.800003,
+      "volume": 124379600.0
+     },
+     {
+      "time": "2026-07-15",
+      "open": 211.960007,
+      "high": 213.809998,
+      "low": 206.039993,
+      "close": 212.5,
+      "volume": 124797200.0
+     },
+     {
+      "time": "2026-07-16",
+      "open": 210.169998,
+      "high": 211.080002,
+      "low": 205.850006,
+      "close": 207.399994,
+      "volume": 122986100.0
+     },
+     {
+      "time": "2026-07-17",
+      "open": 202.639999,
+      "high": 206.649994,
+      "low": 197.970001,
+      "close": 202.809998,
+      "volume": 144281900.0
+     },
+     {
+      "time": "2026-07-20",
+      "open": 205.869995,
+      "high": 207.740005,
+      "low": 202.279999,
+      "close": 203.279999,
+      "volume": 88701500.0
+     },
+     {
+      "time": "2026-07-21",
+      "open": 207.539993,
+      "high": 208.649994,
+      "low": 204.009995,
+      "close": 207.289993,
+      "volume": 108685600.0
+     },
+     {
+      "time": "2026-07-22",
+      "open": 205.809998,
+      "high": 214.389999,
+      "low": 204.949997,
+      "close": 212.059998,
+      "volume": 137645600.0
+     },
+     {
+      "time": "2026-07-23",
+      "open": 209.460007,
+      "high": 210.869995,
+      "low": 205.960007,
+      "close": 208.759995,
+      "volume": 110505300.0
+     },
+     {
+      "time": "2026-07-24",
+      "open": 207.449997,
+      "high": 211.910004,
+      "low": 204.809998,
+      "close": 206.839996,
+      "volume": 114836800.0
+     },
+     {
+      "time": "2026-07-27",
+      "open": 208.199997,
+      "high": 208.75,
+      "low": 195.440002,
+      "close": 196.509995,
+      "volume": 154353700.0
+     },
+     {
+      "time": "2026-07-28",
+      "open": 195.0,
+      "high": 198.699997,
+      "low": 192.740005,
+      "close": 197.009995,
+      "volume": 134111500.0
+     },
+     {
+      "time": "2026-07-29",
+      "open": 195.850006,
+      "high": 197.070007,
+      "low": 190.009995,
+      "close": 190.009995,
+      "volume": 147680800.0
+     },
+     {
+      "time": "2026-07-30",
+      "open": 193.449997,
+      "high": 197.25,
+      "low": 191.520004,
+      "close": 195.039993,
+      "volume": 129010200.0
+     },
+     {
+      "time": "2026-07-31",
+      "open": 198.440002,
+      "high": 202.0,
+      "low": 194.949997,
+      "close": 200.75,
+      "volume": 139961200.0
+     },
+     {
+      "time": "2026-08-03",
+      "open": 197.690002,
+      "high": 208.740005,
+      "low": 196.850006,
+      "close": 206.639999,
+      "volume": 128406900.0
+     },
+     {
+      "time": "2026-08-04",
+      "open": 211.300003,
+      "high": 213.059998,
+      "low": 209.050003,
+      "close": 211.940002,
+      "volume": 134922000.0
+     },
+     {
+      "time": "2026-08-05",
+      "open": 216.860001,
+      "high": 222.220001,
+      "low": 216.399994,
+      "close": 219.220001,
+      "volume": 158187400.0
+     },
+     {
+      "time": "2026-08-06",
+      "open": 221.529999,
+      "high": 223.630005,
+      "low": 217.0,
+      "close": 218.990005,
+      "volume": 113940600.0
+     },
+     {
+      "time": "2026-08-07",
+      "open": 221.539993,
+      "high": 224.759995,
+      "low": 220.660004,
+      "close": 223.960007,
+      "volume": 105669400.0
+     },
+     {
+      "time": "2026-08-10",
+      "open": 223.399994,
+      "high": 224.139999,
+      "low": 216.770004,
+      "close": 217.550003,
+      "volume": 115846600.0
+     },
+     {
+      "time": "2026-08-11",
+      "open": 222.169998,
+      "high": 222.199997,
+      "low": 216.199997,
+      "close": 217.5,
+      "volume": 101273100.0
+     },
+     {
+      "time": "2026-08-12",
+      "open": 221.039993,
+      "high": 225.100006,
+      "low": 220.199997,
+      "close": 224.089996,
+      "volume": 108783600.0
+     },
+     {
+      "time": "2026-08-13",
+      "open": 225.059998,
+      "high": 227.229996,
+      "low": 223.710007,
+      "close": 225.300003,
+      "volume": 98867200.0
+     },
+     {
+      "time": "2026-08-14",
+      "open": 226.770004,
+      "high": 227.490005,
+      "low": 224.5,
+      "close": 225.160004,
+      "volume": 75680900.0
+     },
+     {
+      "time": "2026-08-17",
+      "open": 225.979996,
+      "high": 227.919998,
+      "low": 224.860001,
+      "close": 225.009995,
+      "volume": 93678700.0
+     },
+     {
+      "time": "2026-08-18",
+      "open": 220.449997,
+      "high": 221.639999,
+      "low": 218.690002,
+      "close": 219.740005,
+      "volume": 103128200.0
+     },
+     {
+      "time": "2026-08-19",
+      "open": 221.669998,
+      "high": 222.869995,
+      "low": 216.759995,
+      "close": 217.559998,
+      "volume": 96797300.0
+     },
+     {
+      "time": "2026-08-20",
+      "open": 218.360001,
+      "high": 219.860001,
+      "low": 215.660004,
+      "close": 216.850006,
+      "volume": 92457000.0
+     },
+     {
+      "time": "2026-08-21",
+      "open": 218.419998,
+      "high": 218.740005,
+      "low": 214.5,
+      "close": 214.720001,
+      "volume": 98869300.0
+     },
+     {
+      "time": "2026-08-24",
+      "open": 215.529999,
+      "high": 215.589996,
+      "low": 207.25,
+      "close": 208.479996,
+      "volume": 135187300.0
+     },
+     {
+      "time": "2026-08-25",
+      "open": 211.029999,
+      "high": 214.729996,
+      "low": 210.110001,
+      "close": 213.050003,
+      "volume": 122309000.0
+     },
+     {
+      "time": "2026-08-26",
+      "open": 212.639999,
+      "high": 213.600006,
+      "low": 209.229996,
+      "close": 209.660004,
+      "volume": 179900000.0
+     },
+     {
+      "time": "2026-08-27",
+      "open": 222.860001,
+      "high": 230.470001,
+      "low": 220.899994,
+      "close": 227.979996,
+      "volume": 298909800.0
+     },
+     {
+      "time": "2026-08-28",
+      "open": 227.360001,
+      "high": 229.259995,
+      "low": 216.809998,
+      "close": 217.550003,
+      "volume": 195116400.0
+     },
+     {
+      "time": "2026-08-31",
+      "open": 218.869995,
+      "high": 221.300003,
+      "low": 216.210007,
+      "close": 220.779999,
+      "volume": 124702700.0
+     },
+     {
+      "time": "2026-09-01",
+      "open": 216.75,
+      "high": 220.410004,
+      "low": 215.100006,
+      "close": 217.440002,
+      "volume": 109756200.0
+     },
+     {
+      "time": "2026-09-02",
+      "open": 218.789993,
+      "high": 227.949997,
+      "low": 218.479996,
+      "close": 224.410004,
+      "volume": 157104700.0
+     },
+     {
+      "time": "2026-09-03",
+      "open": 226.020004,
+      "high": 230.399994,
+      "low": 224.75,
+      "close": 228.449997,
+      "volume": 134681600.0
+     },
+     {
+      "time": "2026-09-04",
+      "open": 231.089996,
+      "high": 234.759995,
+      "low": 229.630005,
+      "close": 230.360001,
+      "volume": 135352400.0
+     },
+     {
+      "time": "2026-09-08",
+      "open": 233.110001,
+      "high": 233.710007,
+      "low": 224.850006,
+      "close": 225.729996,
+      "volume": 122965600.0
+     },
+     {
+      "time": "2026-09-09",
+      "open": 225.279999,
+      "high": 226.179993,
+      "low": 223.460007,
+      "close": 223.669998,
+      "volume": 82955500.0
+     },
+     {
+      "time": "2026-09-10",
+      "open": 220.529999,
+      "high": 220.990005,
+      "low": 217.199997,
+      "close": 218.360001,
+      "volume": 105768000.0
+     },
+     {
+      "time": "2026-09-11",
+      "open": 221.240005,
+      "high": 222.0,
+      "low": 218.149994,
+      "close": 218.289993,
+      "volume": 89060100.0
+     },
+     {
+      "time": "2026-09-14",
+      "open": 211.240005,
+      "high": 212.770004,
+      "low": 208.929993,
+      "close": 210.960007,
+      "volume": 132267200.0
+     },
+     {
+      "time": "2026-09-15",
+      "open": 213.380005,
+      "high": 213.940002,
+      "low": 211.160004,
+      "close": 212.169998,
+      "volume": 88059700.0
+     },
+     {
+      "time": "2026-09-16",
+      "open": 214.139999,
+      "high": 216.759995,
+      "low": 212.5,
+      "close": 213.899994,
+      "volume": 96563600.0
+     },
+     {
+      "time": "2026-09-17",
+      "open": 218.380005,
+      "high": 219.910004,
+      "low": 217.149994,
+      "close": 219.339996,
+      "volume": 94191300.0
+     },
+     {
+      "time": "2026-09-18",
+      "open": 219.350006,
+      "high": 222.729996,
+      "low": 218.029999,
+      "close": 222.270004,
+      "volume": 190287400.0
+     },
+     {
+      "time": "2026-09-21",
+      "open": 222.940002,
+      "high": 228.5,
+      "low": 221.559998,
+      "close": 227.380005,
+      "volume": 109806100.0
+     },
+     {
+      "time": "2026-09-22",
+      "open": 226.850006,
+      "high": 229.979996,
+      "low": 226.5,
+      "close": 228.869995,
+      "volume": 95746700.0
+     },
+     {
+      "time": "2026-09-23",
+      "open": 228.029999,
+      "high": 228.949997,
+      "low": 224.020004,
+      "close": 225.509995,
+      "volume": 89547300.0
+     },
+     {
+      "time": "2026-09-24",
+      "open": 222.080002,
+      "high": 224.940002,
+      "low": 221.089996,
+      "close": 224.580002,
+      "volume": 77469900.0
+     },
+     {
+      "time": "2026-09-25",
+      "open": 225.130005,
+      "high": 226.940002,
+      "low": 223.130005,
+      "close": 225.070007,
+      "volume": 89947700.0
+     },
+     {
+      "time": "2026-09-28",
+      "open": 229.75,
+      "high": 233.210007,
+      "low": 228.039993,
+      "close": 228.860001,
+      "volume": 142344300.0
+     },
+     {
+      "time": "2026-09-29",
+      "open": 230.970001,
+      "high": 232.820007,
+      "low": 227.029999,
+      "close": 227.210007,
+      "volume": 101494900.0
+     },
+     {
+      "time": "2026-09-30",
+      "open": 229.270004,
+      "high": 232.369995,
+      "low": 228.169998,
+      "close": 228.380005,
+      "volume": 121732200.0
+     },
+     {
+      "time": "2026-10-01",
+      "open": 229.979996,
+      "high": 232.289993,
+      "low": 228.160004,
+      "close": 230.860001,
+      "volume": 98591400.0
+     },
+     {
+      "time": "2026-10-02",
+      "open": 236.059998,
+      "high": 237.880005,
+      "low": 233.600006,
+      "close": 233.949997,
+      "volume": 134914600.0
+     }
+    ],
+    "intraday": [
+     {
+      "time": "2026-10-02T13:30:00+00:00",
+      "open": 236.054993,
+      "high": 236.419998,
+      "low": 234.529999,
+      "close": 236.110001,
+      "volume": 16230189.0
+     },
+     {
+      "time": "2026-10-02T13:35:00+00:00",
+      "open": 236.100006,
+      "high": 236.589996,
+      "low": 235.160004,
+      "close": 236.440002,
+      "volume": 4516663.0
+     },
+     {
+      "time": "2026-10-02T13:40:00+00:00",
+      "open": 236.419006,
+      "high": 237.470001,
+      "low": 235.699997,
+      "close": 237.382202,
+      "volume": 5607577.0
+     },
+     {
+      "time": "2026-10-02T13:45:00+00:00",
+      "open": 237.389999,
+      "high": 237.550003,
+      "low": 236.649994,
+      "close": 236.679993,
+      "volume": 5437227.0
+     },
+     {
+      "time": "2026-10-02T13:50:00+00:00",
+      "open": 236.649994,
+      "high": 237.550003,
+      "low": 236.610001,
+      "close": 237.300003,
+      "volume": 3120809.0
+     },
+     {
+      "time": "2026-10-02T13:55:00+00:00",
+      "open": 237.309998,
+      "high": 237.550003,
+      "low": 236.639999,
+      "close": 237.410004,
+      "volume": 3083578.0
+     },
+     {
+      "time": "2026-10-02T14:00:00+00:00",
+      "open": 237.399994,
+      "high": 237.869995,
+      "low": 237.089996,
+      "close": 237.449997,
+      "volume": 3689281.0
+     },
+     {
+      "time": "2026-10-02T14:05:00+00:00",
+      "open": 237.449997,
+      "high": 237.470001,
+      "low": 236.25,
+      "close": 236.554993,
+      "volume": 2345859.0
+     },
+     {
+      "time": "2026-10-02T14:10:00+00:00",
+      "open": 236.580002,
+      "high": 237.175003,
+      "low": 236.509995,
+      "close": 236.930099,
+      "volume": 1701649.0
+     },
+     {
+      "time": "2026-10-02T14:15:00+00:00",
+      "open": 236.949997,
+      "high": 237.119995,
+      "low": 236.720001,
+      "close": 237.110001,
+      "volume": 1068650.0
+     },
+     {
+      "time": "2026-10-02T14:20:00+00:00",
+      "open": 237.119995,
+      "high": 237.699997,
+      "low": 237.080002,
+      "close": 237.669998,
+      "volume": 1459467.0
+     },
+     {
+      "time": "2026-10-02T14:25:00+00:00",
+      "open": 237.669998,
+      "high": 237.729996,
+      "low": 237.369995,
+      "close": 237.419998,
+      "volume": 1353659.0
+     },
+     {
+      "time": "2026-10-02T14:30:00+00:00",
+      "open": 237.419998,
+      "high": 237.434998,
+      "low": 236.718002,
+      "close": 236.955002,
+      "volume": 1673021.0
+     },
+     {
+      "time": "2026-10-02T14:35:00+00:00",
+      "open": 236.940002,
+      "high": 237.169998,
+      "low": 236.570007,
+      "close": 237.169998,
+      "volume": 1280777.0
+     },
+     {
+      "time": "2026-10-02T14:40:00+00:00",
+      "open": 237.164993,
+      "high": 237.320007,
+      "low": 236.649994,
+      "close": 236.774994,
+      "volume": 1161724.0
+     },
+     {
+      "time": "2026-10-02T14:45:00+00:00",
+      "open": 236.770004,
+      "high": 237.350006,
+      "low": 236.699997,
+      "close": 237.255005,
+      "volume": 1352974.0
+     },
+     {
+      "time": "2026-10-02T14:50:00+00:00",
+      "open": 237.256195,
+      "high": 237.270004,
+      "low": 236.660004,
+      "close": 236.804993,
+      "volume": 1199752.0
+     },
+     {
+      "time": "2026-10-02T14:55:00+00:00",
+      "open": 236.789993,
+      "high": 237.089996,
+      "low": 236.460007,
+      "close": 236.554993,
+      "volume": 1075952.0
+     },
+     {
+      "time": "2026-10-02T15:00:00+00:00",
+      "open": 236.559998,
+      "high": 236.755005,
+      "low": 235.619995,
+      "close": 235.760101,
+      "volume": 2155668.0
+     },
+     {
+      "time": "2026-10-02T15:05:00+00:00",
+      "open": 235.761703,
+      "high": 235.809998,
+      "low": 234.940002,
+      "close": 235.100006,
+      "volume": 2369708.0
+     },
+     {
+      "time": "2026-10-02T15:10:00+00:00",
+      "open": 235.089996,
+      "high": 235.270004,
+      "low": 234.869995,
+      "close": 234.979004,
+      "volume": 2244299.0
+     },
+     {
+      "time": "2026-10-02T15:15:00+00:00",
+      "open": 234.970001,
+      "high": 235.139999,
+      "low": 234.570007,
+      "close": 234.820007,
+      "volume": 1826229.0
+     },
+     {
+      "time": "2026-10-02T15:20:00+00:00",
+      "open": 234.809998,
+      "high": 234.960007,
+      "low": 234.289993,
+      "close": 234.309998,
+      "volume": 1795191.0
+     },
+     {
+      "time": "2026-10-02T15:25:00+00:00",
+      "open": 234.300003,
+      "high": 234.929993,
+      "low": 234.229996,
+      "close": 234.860001,
+      "volume": 1035409.0
+     },
+     {
+      "time": "2026-10-02T15:30:00+00:00",
+      "open": 234.869995,
+      "high": 235.160004,
+      "low": 234.559998,
+      "close": 235.149994,
+      "volume": 1205696.0
+     },
+     {
+      "time": "2026-10-02T15:35:00+00:00",
+      "open": 235.156204,
+      "high": 235.460007,
+      "low": 235.0,
+      "close": 235.330002,
+      "volume": 1414760.0
+     },
+     {
+      "time": "2026-10-02T15:40:00+00:00",
+      "open": 235.339996,
+      "high": 235.449997,
+      "low": 235.054993,
+      "close": 235.25,
+      "volume": 885549.0
+     },
+     {
+      "time": "2026-10-02T15:45:00+00:00",
+      "open": 235.265503,
+      "high": 235.539993,
+      "low": 235.192398,
+      "close": 235.429993,
+      "volume": 1167104.0
+     },
+     {
+      "time": "2026-10-02T15:50:00+00:00",
+      "open": 235.429993,
+      "high": 235.671295,
+      "low": 235.274994,
+      "close": 235.320007,
+      "volume": 1194641.0
+     },
+     {
+      "time": "2026-10-02T15:55:00+00:00",
+      "open": 235.339996,
+      "high": 235.619995,
+      "low": 235.279999,
+      "close": 235.570007,
+      "volume": 845062.0
+     },
+     {
+      "time": "2026-10-02T16:00:00+00:00",
+      "open": 235.574997,
+      "high": 235.940002,
+      "low": 235.509995,
+      "close": 235.869995,
+      "volume": 1299304.0
+     },
+     {
+      "time": "2026-10-02T16:05:00+00:00",
+      "open": 235.869995,
+      "high": 236.255005,
+      "low": 235.850601,
+      "close": 236.244995,
+      "volume": 1076968.0
+     },
+     {
+      "time": "2026-10-02T16:10:00+00:00",
+      "open": 236.244995,
+      "high": 236.559998,
+      "low": 236.244995,
+      "close": 236.391296,
+      "volume": 1193083.0
+     },
+     {
+      "time": "2026-10-02T16:15:00+00:00",
+      "open": 236.395004,
+      "high": 236.600006,
+      "low": 236.300003,
+      "close": 236.434998,
+      "volume": 856467.0
+     },
+     {
+      "time": "2026-10-02T16:20:00+00:00",
+      "open": 236.429993,
+      "high": 236.589996,
+      "low": 236.201599,
+      "close": 236.274994,
+      "volume": 815796.0
+     },
+     {
+      "time": "2026-10-02T16:25:00+00:00",
+      "open": 236.274994,
+      "high": 236.470001,
+      "low": 236.050003,
+      "close": 236.094299,
+      "volume": 783283.0
+     },
+     {
+      "time": "2026-10-02T16:30:00+00:00",
+      "open": 236.100006,
+      "high": 236.269897,
+      "low": 235.889999,
+      "close": 235.980103,
+      "volume": 1117367.0
+     },
+     {
+      "time": "2026-10-02T16:35:00+00:00",
+      "open": 235.979996,
+      "high": 236.098007,
+      "low": 235.929993,
+      "close": 235.960007,
+      "volume": 546509.0
+     },
+     {
+      "time": "2026-10-02T16:40:00+00:00",
+      "open": 235.960007,
+      "high": 235.975006,
+      "low": 235.25,
+      "close": 235.339996,
+      "volume": 948639.0
+     },
+     {
+      "time": "2026-10-02T16:45:00+00:00",
+      "open": 235.345001,
+      "high": 235.600006,
+      "low": 235.120407,
+      "close": 235.164993,
+      "volume": 823387.0
+     },
+     {
+      "time": "2026-10-02T16:50:00+00:00",
+      "open": 235.160004,
+      "high": 235.423096,
+      "low": 234.919998,
+      "close": 235.300003,
+      "volume": 1062241.0
+     },
+     {
+      "time": "2026-10-02T16:55:00+00:00",
+      "open": 235.300003,
+      "high": 235.395004,
+      "low": 235.119995,
+      "close": 235.244293,
+      "volume": 846873.0
+     },
+     {
+      "time": "2026-10-02T17:00:00+00:00",
+      "open": 235.229996,
+      "high": 235.479996,
+      "low": 235.205002,
+      "close": 235.350006,
+      "volume": 1010108.0
+     },
+     {
+      "time": "2026-10-02T17:05:00+00:00",
+      "open": 235.339996,
+      "high": 235.380005,
+      "low": 234.470001,
+      "close": 234.570007,
+      "volume": 1707550.0
+     },
+     {
+      "time": "2026-10-02T17:10:00+00:00",
+      "open": 234.539993,
+      "high": 234.880005,
+      "low": 234.524994,
+      "close": 234.690002,
+      "volume": 819069.0
+     },
+     {
+      "time": "2026-10-02T17:15:00+00:00",
+      "open": 234.684998,
+      "high": 235.059998,
+      "low": 234.649994,
+      "close": 234.850494,
+      "volume": 690367.0
+     },
+     {
+      "time": "2026-10-02T17:20:00+00:00",
+      "open": 234.864395,
+      "high": 235.050003,
+      "low": 234.432007,
+      "close": 234.490005,
+      "volume": 987821.0
+     },
+     {
+      "time": "2026-10-02T17:25:00+00:00",
+      "open": 234.479996,
+      "high": 234.539993,
+      "low": 234.190002,
+      "close": 234.300003,
+      "volume": 1068601.0
+     },
+     {
+      "time": "2026-10-02T17:30:00+00:00",
+      "open": 234.300003,
+      "high": 234.639999,
+      "low": 234.229996,
+      "close": 234.570007,
+      "volume": 765476.0
+     },
+     {
+      "time": "2026-10-02T17:35:00+00:00",
+      "open": 234.570007,
+      "high": 234.570007,
+      "low": 234.2108,
+      "close": 234.425003,
+      "volume": 643152.0
+     },
+     {
+      "time": "2026-10-02T17:40:00+00:00",
+      "open": 234.425003,
+      "high": 234.604996,
+      "low": 234.25,
+      "close": 234.501099,
+      "volume": 517868.0
+     },
+     {
+      "time": "2026-10-02T17:45:00+00:00",
+      "open": 234.509995,
+      "high": 234.759995,
+      "low": 234.490005,
+      "close": 234.735001,
+      "volume": 669100.0
+     },
+     {
+      "time": "2026-10-02T17:50:00+00:00",
+      "open": 234.740097,
+      "high": 234.869995,
+      "low": 234.410004,
+      "close": 234.817505,
+      "volume": 668613.0
+     },
+     {
+      "time": "2026-10-02T17:55:00+00:00",
+      "open": 234.813995,
+      "high": 234.813995,
+      "low": 234.550003,
+      "close": 234.688507,
+      "volume": 482895.0
+     },
+     {
+      "time": "2026-10-02T18:00:00+00:00",
+      "open": 234.690002,
+      "high": 234.869995,
+      "low": 234.470001,
+      "close": 234.804993,
+      "volume": 651587.0
+     },
+     {
+      "time": "2026-10-02T18:05:00+00:00",
+      "open": 234.779999,
+      "high": 234.820007,
+      "low": 234.554993,
+      "close": 234.699997,
+      "volume": 523314.0
+     },
+     {
+      "time": "2026-10-02T18:10:00+00:00",
+      "open": 234.710007,
+      "high": 234.824997,
+      "low": 234.630005,
+      "close": 234.779999,
+      "volume": 342924.0
+     },
+     {
+      "time": "2026-10-02T18:15:00+00:00",
+      "open": 234.779999,
+      "high": 234.839996,
+      "low": 234.610001,
+      "close": 234.770004,
+      "volume": 427528.0
+     },
+     {
+      "time": "2026-10-02T18:20:00+00:00",
+      "open": 234.774994,
+      "high": 234.820007,
+      "low": 234.539993,
+      "close": 234.600006,
+      "volume": 421993.0
+     },
+     {
+      "time": "2026-10-02T18:25:00+00:00",
+      "open": 234.609894,
+      "high": 234.744995,
+      "low": 234.520004,
+      "close": 234.649994,
+      "volume": 523117.0
+     },
+     {
+      "time": "2026-10-02T18:30:00+00:00",
+      "open": 234.649994,
+      "high": 234.649994,
+      "low": 234.360001,
+      "close": 234.381195,
+      "volume": 556791.0
+     },
+     {
+      "time": "2026-10-02T18:35:00+00:00",
+      "open": 234.384995,
+      "high": 234.460007,
+      "low": 234.320007,
+      "close": 234.360107,
+      "volume": 407530.0
+     },
+     {
+      "time": "2026-10-02T18:40:00+00:00",
+      "open": 234.369995,
+      "high": 234.660004,
+      "low": 234.337601,
+      "close": 234.520004,
+      "volume": 467882.0
+     },
+     {
+      "time": "2026-10-02T18:45:00+00:00",
+      "open": 234.520401,
+      "high": 234.539993,
+      "low": 234.315002,
+      "close": 234.365005,
+      "volume": 580161.0
+     },
+     {
+      "time": "2026-10-02T18:50:00+00:00",
+      "open": 234.369995,
+      "high": 234.619904,
+      "low": 234.339996,
+      "close": 234.460007,
+      "volume": 617016.0
+     },
+     {
+      "time": "2026-10-02T18:55:00+00:00",
+      "open": 234.449997,
+      "high": 234.610001,
+      "low": 234.445206,
+      "close": 234.559998,
+      "volume": 480121.0
+     },
+     {
+      "time": "2026-10-02T19:00:00+00:00",
+      "open": 234.539993,
+      "high": 234.649902,
+      "low": 234.440094,
+      "close": 234.5,
+      "volume": 477679.0
+     },
+     {
+      "time": "2026-10-02T19:05:00+00:00",
+      "open": 234.520004,
+      "high": 234.580002,
+      "low": 234.300003,
+      "close": 234.369995,
+      "volume": 456734.0
+     },
+     {
+      "time": "2026-10-02T19:10:00+00:00",
+      "open": 234.380005,
+      "high": 234.449997,
+      "low": 234.199997,
+      "close": 234.395996,
+      "volume": 647595.0
+     },
+     {
+      "time": "2026-10-02T19:15:00+00:00",
+      "open": 234.410004,
+      "high": 234.505096,
+      "low": 233.960007,
+      "close": 234.050095,
+      "volume": 2395097.0
+     },
+     {
+      "time": "2026-10-02T19:20:00+00:00",
+      "open": 234.059998,
+      "high": 234.130005,
+      "low": 233.841202,
+      "close": 233.910095,
+      "volume": 1022591.0
+     },
+     {
+      "time": "2026-10-02T19:25:00+00:00",
+      "open": 233.914993,
+      "high": 233.975006,
+      "low": 233.600006,
+      "close": 233.770004,
+      "volume": 798598.0
+     },
+     {
+      "time": "2026-10-02T19:30:00+00:00",
+      "open": 233.75,
+      "high": 234.070007,
+      "low": 233.679993,
+      "close": 233.960007,
+      "volume": 935975.0
+     },
+     {
+      "time": "2026-10-02T19:35:00+00:00",
+      "open": 233.964996,
+      "high": 234.490005,
+      "low": 233.919998,
+      "close": 234.425003,
+      "volume": 852013.0
+     },
+     {
+      "time": "2026-10-02T19:40:00+00:00",
+      "open": 234.425003,
+      "high": 234.544998,
+      "low": 234.279999,
+      "close": 234.309998,
+      "volume": 924279.0
+     },
+     {
+      "time": "2026-10-02T19:45:00+00:00",
+      "open": 234.315002,
+      "high": 234.544998,
+      "low": 234.274994,
+      "close": 234.369995,
+      "volume": 908343.0
+     },
+     {
+      "time": "2026-10-02T19:50:00+00:00",
+      "open": 234.369995,
+      "high": 234.550003,
+      "low": 233.949997,
+      "close": 234.279999,
+      "volume": 1512620.0
+     },
+     {
+      "time": "2026-10-02T19:55:00+00:00",
+      "open": 234.289993,
+      "high": 234.449997,
+      "low": 233.770004,
+      "close": 233.990005,
+      "volume": 3286621.0
+     }
+    ],
+    "source_ids": [
+     "src_mkt_nvda",
+     "src_mkt_gspc"
+    ]
+   },
+   "news": {
+    "query": "NVIDIA OR NVDA",
+    "articles_reviewed": 40,
+    "articles": [
+     {
+      "id": "yh_d082f03654aa",
+      "title": "Nvidia's $20bn licensing deal with Groq faces lawsuit from jilted engineers",
+      "url": "https://finance.yahoo.com/technology/articles/nvidia-20bn-licensing-deal-groq-090003163.html",
+      "publisher": "Financial Times",
+      "published_at": "2026-10-05T10:03:51+00:00",
+      "retrieved_at": "2026-10-05T10:29:57.713816+00:00",
+      "provider": "yahoo_finance_news",
+      "tone": null,
+      "relevance": 0.998,
+      "query": "NVDA, NVIDIA"
+     },
+     {
+      "id": "yh_9c5a81eff96d",
+      "title": "Nvidia Just Added $150 Billion to Its Buyback Plan. Selling Shares Inside Your IRA Won\u2019t Make More Social Security Taxable, but Taking the Money Out Could",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-just-added-150-billion-093006256.html",
+      "publisher": "24/7 Wall St.",
+      "published_at": "2026-10-05T09:30:06+00:00",
+      "retrieved_at": "2026-10-05T10:29:57.713816+00:00",
+      "provider": "yahoo_finance_news",
+      "tone": null,
+      "relevance": 0.996,
+      "query": "NVDA, NVIDIA"
+     },
+     {
+      "id": "yh_5ad46b7fc9e5",
+      "title": "Nvidia Set for Stock Record as Key Supplier Celebrates Booming AI Demand",
+      "url": "https://finance.yahoo.com/m/687e77fb-486c-339d-9a49-1b7cbc3224cb/nvidia-set-for-stock-record.html",
+      "publisher": "Barrons.com",
+      "published_at": "2026-10-05T08:50:00+00:00",
+      "retrieved_at": "2026-10-05T10:29:57.713816+00:00",
+      "provider": "yahoo_finance_news",
+      "tone": null,
+      "relevance": 0.993,
+      "query": "NVDA, NVIDIA"
+     },
+     {
+      "id": "yh_d90b79f54d2c",
+      "title": "BNP Paribas Adjusts Price Target on Nvidia to $345 From $285, Keeps Outperform Rating",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/bnp-paribas-adjusts-price-target-100742016.html",
+      "publisher": "MT Newswires",
+      "published_at": "2026-10-05T10:07:42+00:00",
+      "retrieved_at": "2026-10-05T10:29:57.713816+00:00",
+      "provider": "yahoo_finance_news",
+      "tone": null,
+      "relevance": 0.798,
+      "query": "NVDA, NVIDIA"
+     },
+     {
+      "id": "yh_0d3203421d95",
+      "title": "Where Will Nvidia Stock Be in 2030? Three Scenarios for the World's Most Valuable AI Company",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/where-nvidia-stock-2030-three-092000986.html",
+      "publisher": "Motley Fool",
+      "published_at": "2026-10-05T09:20:00+00:00",
+      "retrieved_at": "2026-10-05T10:29:57.713816+00:00",
+      "provider": "yahoo_finance_news",
+      "tone": null,
+      "relevance": 0.795,
+      "query": "NVDA, NVIDIA"
+     }
+    ],
+    "clusters": [
+     {
+      "cluster_id": "cl_293dd206676d",
+      "theme": "Lawsuit over Groq licensing deal",
+      "summary": "The Financial Times reports that Nvidia\u2019s $20 billion licensing deal with Groq faces a lawsuit from engineers described as jilted.",
+      "event_type": "lawsuit",
+      "tone": -0.5,
+      "relevance": 0.998,
+      "article_ids": [
+       "yh_d082f03654aa"
+      ],
+      "first_seen": "2026-10-05T10:03:51+00:00",
+      "source_count": 1
+     },
+     {
+      "cluster_id": "cl_81e9b46de6b9",
+      "theme": "Nvidia expands share buyback plan",
+      "summary": "A headline reports that Nvidia added $150 billion to its buyback plan; it also discusses Social Security tax implications of IRA withdrawals.",
+      "event_type": "other",
+      "tone": 0.4,
+      "relevance": 0.996,
+      "article_ids": [
+       "yh_9c5a81eff96d"
+      ],
+      "first_seen": "2026-10-05T09:30:06+00:00",
+      "source_count": 1
+     },
+     {
+      "cluster_id": "cl_64243dc4febc",
+      "theme": "Nvidia stock record and AI demand",
+      "summary": "Barron\u2019s reports Nvidia is set for a stock record as a key supplier celebrates booming AI demand.",
+      "event_type": "market_move",
+      "tone": 0.6,
+      "relevance": 0.993,
+      "article_ids": [
+       "yh_5ad46b7fc9e5"
+      ],
+      "first_seen": "2026-10-05T08:50:00+00:00",
+      "source_count": 1
+     },
+     {
+      "cluster_id": "cl_40502350d164",
+      "theme": "BNP Paribas raises Nvidia target",
+      "summary": "BNP Paribas raised its Nvidia price target to $345 from $285 and kept its Outperform rating, according to MT Newswires.",
+      "event_type": "analyst_action",
+      "tone": 0.6,
+      "relevance": 0.798,
+      "article_ids": [
+       "yh_d90b79f54d2c"
+      ],
+      "first_seen": "2026-10-05T10:07:42+00:00",
+      "source_count": 1
+     },
+     {
+      "cluster_id": "cl_7f4045a90a3d",
+      "theme": "Nvidia stock scenarios for 2030",
+      "summary": "The Motley Fool outlines three possible scenarios for Nvidia stock in 2030.",
+      "event_type": "other",
+      "tone": 0.0,
+      "relevance": 0.795,
+      "article_ids": [
+       "yh_0d3203421d95"
+      ],
+      "first_seen": "2026-10-05T09:20:00+00:00",
+      "source_count": 1
+     }
+    ],
+    "tone_timeline": [],
+    "volume_timeline": [],
+    "providers_used": [
+     "yahoo_finance_news"
+    ]
+   },
+   "sentiment": {
+    "overall_tone": 0.22,
+    "recent_tone": 0.22,
+    "prior_tone": null,
+    "sentiment_change": null,
+    "label": "positive",
+    "agreement": "mixed",
+    "evidence_confidence": "medium",
+    "confidence_reason": "5 independent sources, with mixed tone across them. Tone from headline tone labels.",
+    "timeline": [
+     {
+      "date": "2026-10-05",
+      "value": 0.22
+     }
+    ],
+    "cluster_sentiment": [
+     {
+      "cluster_id": "cl_293dd206676d",
+      "theme": "Lawsuit over Groq licensing deal",
+      "tone": -0.5
+     },
+     {
+      "cluster_id": "cl_81e9b46de6b9",
+      "theme": "Nvidia expands share buyback plan",
+      "tone": 0.4
+     },
+     {
+      "cluster_id": "cl_64243dc4febc",
+      "theme": "Nvidia stock record and AI demand",
+      "tone": 0.6
+     },
+     {
+      "cluster_id": "cl_40502350d164",
+      "theme": "BNP Paribas raises Nvidia target",
+      "tone": 0.6
+     },
+     {
+      "cluster_id": "cl_7f4045a90a3d",
+      "theme": "Nvidia stock scenarios for 2030",
+      "tone": 0.0
+     }
+    ]
+   },
+   "events": {
+    "events": [
+     {
+      "id": "ev_0fcaa767c5d7",
+      "timestamp": "2026-08-26",
+      "event_type": "earnings",
+      "title": "10-Q filed with the SEC",
+      "description": "10-Q",
+      "origin": "filing",
+      "source_ids": [
+       "src_filing_238e74491e97"
+      ]
+     },
+     {
+      "id": "ev_0c35f296c932",
+      "timestamp": "2026-08-26",
+      "event_type": "filing",
+      "title": "8-K filed with the SEC",
+      "description": "8-K",
+      "origin": "filing",
+      "source_ids": [
+       "src_filing_acf34b01d96f"
+      ]
+     },
+     {
+      "id": "ev_cbc1581cfd9f",
+      "timestamp": "2026-09-03",
+      "event_type": "filing",
+      "title": "8-K filed with the SEC",
+      "description": "8-K",
+      "origin": "filing",
+      "source_ids": [
+       "src_filing_1dc1a36d5d9b"
+      ]
+     },
+     {
+      "id": "ev_c2f987b36a35",
+      "timestamp": "2026-10-02T14:00:00+00:00",
+      "event_type": "market_move",
+      "title": "Price reached session high",
+      "description": "237.87",
+      "origin": "market",
+      "source_ids": [
+       "src_mkt_nvda"
+      ]
+     },
+     {
+      "id": "ev_75920ada602a",
+      "timestamp": "2026-10-02T19:25:00+00:00",
+      "event_type": "market_move",
+      "title": "Price reached session low",
+      "description": "233.60",
+      "origin": "market",
+      "source_ids": [
+       "src_mkt_nvda"
+      ]
+     },
+     {
+      "id": "ev_f21d1392a9bb",
+      "timestamp": "2026-10-05T08:50:00+00:00",
+      "event_type": "market_move",
+      "title": "Nvidia stock record and AI demand",
+      "description": "Barron\u2019s reports Nvidia is set for a stock record as a key supplier celebrates booming AI demand.",
+      "origin": "news",
+      "source_ids": [
+       "yh_5ad46b7fc9e5"
+      ]
+     },
+     {
+      "id": "ev_382e683f4576",
+      "timestamp": "2026-10-05T09:20:00+00:00",
+      "event_type": "other",
+      "title": "Nvidia stock scenarios for 2030",
+      "description": "The Motley Fool outlines three possible scenarios for Nvidia stock in 2030.",
+      "origin": "news",
+      "source_ids": [
+       "yh_0d3203421d95"
+      ]
+     },
+     {
+      "id": "ev_c31c0753f2d1",
+      "timestamp": "2026-10-05T09:30:06+00:00",
+      "event_type": "other",
+      "title": "Nvidia expands share buyback plan",
+      "description": "A headline reports that Nvidia added $150 billion to its buyback plan; it also discusses Social Security tax implications of IRA withdrawals.",
+      "origin": "news",
+      "source_ids": [
+       "yh_9c5a81eff96d"
+      ]
+     },
+     {
+      "id": "ev_d9d74b3c4859",
+      "timestamp": "2026-10-05T10:03:51+00:00",
+      "event_type": "lawsuit",
+      "title": "Lawsuit over Groq licensing deal",
+      "description": "The Financial Times reports that Nvidia\u2019s $20 billion licensing deal with Groq faces a lawsuit from engineers described as jilted.",
+      "origin": "news",
+      "source_ids": [
+       "yh_d082f03654aa"
+      ]
+     },
+     {
+      "id": "ev_eaddd58e4aab",
+      "timestamp": "2026-10-05T10:07:42+00:00",
+      "event_type": "analyst_action",
+      "title": "BNP Paribas raises Nvidia target",
+      "description": "BNP Paribas raised its Nvidia price target to $345 from $285 and kept its Outperform rating, according to MT Newswires.",
+      "origin": "news",
+      "source_ids": [
+       "yh_d90b79f54d2c"
+      ]
+     }
+    ]
+   },
+   "financial": {
+    "applicable": true,
+    "note": null,
+    "entity_name": "NVIDIA CORP",
+    "cik": "0001045810",
+    "fiscal_period": "quarter",
+    "period_end": "2026-07-26",
+    "revenue": 96221000000.0,
+    "revenue_growth_yoy": 1.0585,
+    "revenue_growth_qoq": 0.179,
+    "operating_income": 63734000000.0,
+    "operating_margin": 0.6624,
+    "net_income": 59688000000.0,
+    "net_margin": 0.6203,
+    "assets": 320272000000.0,
+    "liabilities": 91288000000.0,
+    "cash": 22443000000.0,
+    "debt": 33366000000.0,
+    "shares_outstanding": 24100000000.0,
+    "recent_filings": [
+     {
+      "form": "8-K",
+      "filed": "2026-09-03",
+      "description": "8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
+     },
+     {
+      "form": "10-Q",
+      "filed": "2026-08-26",
+      "description": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
+     },
+     {
+      "form": "8-K",
+      "filed": "2026-08-26",
+      "description": "8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm"
+     },
+     {
+      "form": "8-K",
+      "filed": "2026-08-17",
+      "description": "8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm"
+     },
+     {
+      "form": "8-K",
+      "filed": "2026-07-02",
+      "description": "8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000060/nvda-20260628.htm"
+     },
+     {
+      "form": "8-K",
+      "filed": "2026-06-30",
+      "description": "8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000056/nvda-20260624.htm"
+     },
+     {
+      "form": "8-K",
+      "filed": "2026-06-18",
+      "description": "8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000119312526275783/d48176d8k.htm"
+     },
+     {
+      "form": "10-Q",
+      "filed": "2026-05-20",
+      "description": "10-Q",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000052/nvda-20260426.htm"
+     }
+    ],
+    "source_ids": [
+     "src_sec_facts_0001045810",
+     "src_filing_1dc1a36d5d9b",
+     "src_filing_238e74491e97",
+     "src_filing_acf34b01d96f",
+     "src_filing_1882260a6135",
+     "src_filing_78dd85f5a12c",
+     "src_filing_31f3300ffaf0"
+    ]
+   },
+   "macro": {
+    "indicators": [
+     {
+      "id": "^GSPC",
+      "name": "S&P 500",
+      "value": 7722.72,
+      "change": 0.73,
+      "unit": "pts",
+      "as_of": "2026-10-02",
+      "provider": "yahoo_finance",
+      "series": [
+       {
+        "date": "2026-09-03",
+        "value": 7747.709961
+       },
+       {
+        "date": "2026-09-04",
+        "value": 7718.600098
+       },
+       {
+        "date": "2026-09-08",
+        "value": 7673.52002
+       },
+       {
+        "date": "2026-09-09",
+        "value": 7636.359863
+       },
+       {
+        "date": "2026-09-10",
+        "value": 7591.700195
+       },
+       {
+        "date": "2026-09-11",
+        "value": 7656.97998
+       },
+       {
+        "date": "2026-09-14",
+        "value": 7619.97998
+       },
+       {
+        "date": "2026-09-15",
+        "value": 7585.72998
+       },
+       {
+        "date": "2026-09-16",
+        "value": 7551.810059
+       },
+       {
+        "date": "2026-09-17",
+        "value": 7637.759766
+       },
+       {
+        "date": "2026-09-18",
+        "value": 7650.5
+       },
+       {
+        "date": "2026-09-21",
+        "value": 7764.700195
+       },
+       {
+        "date": "2026-09-22",
+        "value": 7764.640137
+       },
+       {
+        "date": "2026-09-23",
+        "value": 7706.029785
+       },
+       {
+        "date": "2026-09-24",
+        "value": 7704.129883
+       },
+       {
+        "date": "2026-09-25",
+        "value": 7743.410156
+       },
+       {
+        "date": "2026-09-28",
+        "value": 7683.689941
+       },
+       {
+        "date": "2026-09-29",
+        "value": 7670.839844
+       },
+       {
+        "date": "2026-09-30",
+        "value": 7651.540039
+       },
+       {
+        "date": "2026-10-01",
+        "value": 7666.450195
+       },
+       {
+        "date": "2026-10-02",
+        "value": 7722.720215
+       }
+      ],
+      "source_id": "src_mkt_gspc"
+     },
+     {
+      "id": "^IXIC",
+      "name": "Nasdaq Composite",
+      "value": 27190.859,
+      "change": 1.19,
+      "unit": "pts",
+      "as_of": "2026-10-02",
+      "provider": "yahoo_finance",
+      "series": [
+       {
+        "date": "2026-09-03",
+        "value": 26584.060547
+       },
+       {
+        "date": "2026-09-04",
+        "value": 26506.990234
+       },
+       {
+        "date": "2026-09-08",
+        "value": 26421.410156
+       },
+       {
+        "date": "2026-09-09",
+        "value": 26253.339844
+       },
+       {
+        "date": "2026-09-10",
+        "value": 26081.720703
+       },
+       {
+        "date": "2026-09-11",
+        "value": 26333.039062
+       },
+       {
+        "date": "2026-09-14",
+        "value": 26186.410156
+       },
+       {
+        "date": "2026-09-15",
+        "value": 25981.570312
+       },
+       {
+        "date": "2026-09-16",
+        "value": 25978.429688
+       },
+       {
+        "date": "2026-09-17",
+        "value": 26418.300781
+       },
+       {
+        "date": "2026-09-18",
+        "value": 26522.539062
+       },
+       {
+        "date": "2026-09-21",
+        "value": 27122.089844
+       },
+       {
+        "date": "2026-09-22",
+        "value": 27244.279297
+       },
+       {
+        "date": "2026-09-23",
+        "value": 26936.039062
+       },
+       {
+        "date": "2026-09-24",
+        "value": 26939.369141
+       },
+       {
+        "date": "2026-09-25",
+        "value": 27068.720703
+       },
+       {
+        "date": "2026-09-28",
+        "value": 26820.380859
+       },
+       {
+        "date": "2026-09-29",
+        "value": 26797.539062
+       },
+       {
+        "date": "2026-09-30",
+        "value": 26861.060547
+       },
+       {
+        "date": "2026-10-01",
+        "value": 26871.599609
+       },
+       {
+        "date": "2026-10-02",
+        "value": 27190.859375
+       }
+      ],
+      "source_id": "src_mkt_ixic"
+     },
+     {
+      "id": "^VIX",
+      "name": "VIX volatility index",
+      "value": 16.28,
+      "change": 6.34,
+      "unit": "pts",
+      "as_of": "2026-10-05",
+      "provider": "yahoo_finance",
+      "series": [
+       {
+        "date": "2026-09-07",
+        "value": 15.3
+       },
+       {
+        "date": "2026-09-08",
+        "value": 15.72
+       },
+       {
+        "date": "2026-09-09",
+        "value": 16.459999
+       },
+       {
+        "date": "2026-09-10",
+        "value": 17.84
+       },
+       {
+        "date": "2026-09-11",
+        "value": 15.84
+       },
+       {
+        "date": "2026-09-14",
+        "value": 17.1
+       },
+       {
+        "date": "2026-09-15",
+        "value": 17.200001
+       },
+       {
+        "date": "2026-09-16",
+        "value": 17.709999
+       },
+       {
+        "date": "2026-09-17",
+        "value": 15.44
+       },
+       {
+        "date": "2026-09-18",
+        "value": 14.81
+       },
+       {
+        "date": "2026-09-21",
+        "value": 14.87
+       },
+       {
+        "date": "2026-09-22",
+        "value": 14.21
+       },
+       {
+        "date": "2026-09-23",
+        "value": 15.18
+       },
+       {
+        "date": "2026-09-24",
+        "value": 15.67
+       },
+       {
+        "date": "2026-09-25",
+        "value": 14.87
+       },
+       {
+        "date": "2026-09-28",
+        "value": 16.07
+       },
+       {
+        "date": "2026-09-29",
+        "value": 16.040001
+       },
+       {
+        "date": "2026-09-30",
+        "value": 16.34
+       },
+       {
+        "date": "2026-10-01",
+        "value": 16.389999
+       },
+       {
+        "date": "2026-10-02",
+        "value": 15.31
+       },
+       {
+        "date": "2026-10-05",
+        "value": 16.280001
+       }
+      ],
+      "source_id": "src_mkt_vix"
+     },
+     {
+      "id": "^TNX",
+      "name": "US 10Y yield",
+      "value": 5.277,
+      "change": 0.76,
+      "unit": "%",
+      "as_of": "2026-10-02",
+      "provider": "yahoo_finance",
+      "series": [
+       {
+        "date": "2026-09-02",
+        "value": 4.796
+       },
+       {
+        "date": "2026-09-03",
+        "value": 4.762
+       },
+       {
+        "date": "2026-09-04",
+        "value": 4.784
+       },
+       {
+        "date": "2026-09-08",
+        "value": 4.806
+       },
+       {
+        "date": "2026-09-09",
+        "value": 4.837
+       },
+       {
+        "date": "2026-09-10",
+        "value": 4.944
+       },
+       {
+        "date": "2026-09-11",
+        "value": 4.975
+       },
+       {
+        "date": "2026-09-14",
+        "value": 4.961
+       },
+       {
+        "date": "2026-09-15",
+        "value": 4.996
+       },
+       {
+        "date": "2026-09-16",
+        "value": 5.006
+       },
+       {
+        "date": "2026-09-17",
+        "value": 4.947
+       },
+       {
+        "date": "2026-09-18",
+        "value": 4.998
+       },
+       {
+        "date": "2026-09-21",
+        "value": 4.963
+       },
+       {
+        "date": "2026-09-22",
+        "value": 4.968
+       },
+       {
+        "date": "2026-09-23",
+        "value": 5.114
+       },
+       {
+        "date": "2026-09-24",
+        "value": 5.162
+       },
+       {
+        "date": "2026-09-25",
+        "value": 5.184
+       },
+       {
+        "date": "2026-09-28",
+        "value": 5.24
+       },
+       {
+        "date": "2026-09-29",
+        "value": 5.255
+       },
+       {
+        "date": "2026-09-30",
+        "value": 5.293
+       },
+       {
+        "date": "2026-10-01",
+        "value": 5.237
+       },
+       {
+        "date": "2026-10-02",
+        "value": 5.277
+       }
+      ],
+      "source_id": "src_mkt_tnx"
+     },
+     {
+      "id": "DX-Y.NYB",
+      "name": "US Dollar index",
+      "value": 102.223,
+      "change": 0.29,
+      "unit": "pts",
+      "as_of": "2026-10-05",
+      "provider": "yahoo_finance",
+      "series": [
+       {
+        "date": "2026-09-08",
+        "value": 98.839996
+       },
+       {
+        "date": "2026-09-09",
+        "value": 98.769997
+       },
+       {
+        "date": "2026-09-10",
+        "value": 99.089996
+       },
+       {
+        "date": "2026-09-11",
+        "value": 99.120003
+       },
+       {
+        "date": "2026-09-14",
+        "value": 99.459999
+       },
+       {
+        "date": "2026-09-15",
+        "value": 99.650002
+       },
+       {
+        "date": "2026-09-16",
+        "value": 100.309998
+       },
+       {
+        "date": "2026-09-17",
+        "value": 100.220001
+       },
+       {
+        "date": "2026-09-18",
+        "value": 100.220001
+       },
+       {
+        "date": "2026-09-21",
+        "value": 100.43
+       },
+       {
+        "date": "2026-09-22",
+        "value": 100.599998
+       },
+       {
+        "date": "2026-09-23",
+        "value": 101.099998
+       },
+       {
+        "date": "2026-09-24",
+        "value": 101.290001
+       },
+       {
+        "date": "2026-09-25",
+        "value": 100.970001
+       },
+       {
+        "date": "2026-09-28",
+        "value": 101.199997
+       },
+       {
+        "date": "2026-09-29",
+        "value": 101.370003
+       },
+       {
+        "date": "2026-09-30",
+        "value": 101.449997
+       },
+       {
+        "date": "2026-10-01",
+        "value": 102.099998
+       },
+       {
+        "date": "2026-10-02",
+        "value": 101.93
+       },
+       {
+        "date": "2026-10-05",
+        "value": 102.223
+       }
+      ],
+      "source_id": "src_mkt_dx-ynyb"
+     },
+     {
+      "id": "CL=F",
+      "name": "WTI crude oil",
+      "value": 90.88,
+      "change": -0.25,
+      "unit": "USD",
+      "as_of": "2026-10-05",
+      "provider": "yahoo_finance",
+      "series": [
+       {
+        "date": "2026-09-08",
+        "value": 93.029999
+       },
+       {
+        "date": "2026-09-09",
+        "value": 96.050003
+       },
+       {
+        "date": "2026-09-10",
+        "value": 102.480003
+       },
+       {
+        "date": "2026-09-11",
+        "value": 100.050003
+       },
+       {
+        "date": "2026-09-14",
+        "value": 101.389999
+       },
+       {
+        "date": "2026-09-15",
+        "value": 105.830002
+       },
+       {
+        "date": "2026-09-16",
+        "value": 102.43
+       },
+       {
+        "date": "2026-09-17",
+        "value": 101.910004
+       },
+       {
+        "date": "2026-09-18",
+        "value": 100.300003
+       },
+       {
+        "date": "2026-09-21",
+        "value": 95.779999
+       },
+       {
+        "date": "2026-09-22",
+        "value": 94.589996
+       },
+       {
+        "date": "2026-09-23",
+        "value": 92.160004
+       },
+       {
+        "date": "2026-09-24",
+        "value": 94.610001
+       },
+       {
+        "date": "2026-09-25",
+        "value": 92.410004
+       },
+       {
+        "date": "2026-09-28",
+        "value": 92.599998
+       },
+       {
+        "date": "2026-09-29",
+        "value": 89.379997
+       },
+       {
+        "date": "2026-09-30",
+        "value": 90.419998
+       },
+       {
+        "date": "2026-10-01",
+        "value": 92.870003
+       },
+       {
+        "date": "2026-10-02",
+        "value": 91.110001
+       },
+       {
+        "date": "2026-10-05",
+        "value": 90.879997
+       }
+      ],
+      "source_id": "src_mkt_clf"
+     },
+     {
+      "id": "GC=F",
+      "name": "Gold",
+      "value": 4185.2,
+      "change": 0.55,
+      "unit": "USD",
+      "as_of": "2026-10-05",
+      "provider": "yahoo_finance",
+      "series": [
+       {
+        "date": "2026-09-08",
+        "value": 4439.0
+       },
+       {
+        "date": "2026-09-09",
+        "value": 4460.700195
+       },
+       {
+        "date": "2026-09-10",
+        "value": 4407.299805
+       },
+       {
+        "date": "2026-09-11",
+        "value": 4408.899902
+       },
+       {
+        "date": "2026-09-14",
+        "value": 4351.899902
+       },
+       {
+        "date": "2026-09-15",
+        "value": 4332.799805
+       },
+       {
+        "date": "2026-09-16",
+        "value": 4387.5
+       },
+       {
+        "date": "2026-09-17",
+        "value": 4399.700195
+       },
+       {
+        "date": "2026-09-18",
+        "value": 4424.899902
+       },
+       {
+        "date": "2026-09-21",
+        "value": 4383.899902
+       },
+       {
+        "date": "2026-09-22",
+        "value": 4376.399902
+       },
+       {
+        "date": "2026-09-23",
+        "value": 4318.399902
+       },
+       {
+        "date": "2026-09-24",
+        "value": 4298.0
+       },
+       {
+        "date": "2026-09-25",
+        "value": 4321.200195
+       },
+       {
+        "date": "2026-09-28",
+        "value": 4168.399902
+       },
+       {
+        "date": "2026-09-29",
+        "value": 4179.700195
+       },
+       {
+        "date": "2026-09-30",
+        "value": 4186.700195
+       },
+       {
+        "date": "2026-10-01",
+        "value": 4202.299805
+       },
+       {
+        "date": "2026-10-02",
+        "value": 4162.299805
+       },
+       {
+        "date": "2026-10-05",
+        "value": 4185.200195
+       }
+      ],
+      "source_id": "src_mkt_gcf"
+     }
+    ],
+    "notes": [
+     "FRED macro series not configured (optional FRED_API_KEY)."
+    ]
+   },
+   "risks": {
+    "items": [
+     {
+      "risk": "operational",
+      "level": "MEDIUM",
+      "reason": "A lawsuit tied to NVIDIA\u2019s $20 billion Groq licensing deal could complicate execution or create uncertainty around the agreement; the available report does not establish an operational disruption.",
+      "evidence_ids": [
+       "yh_d082f03654aa"
+      ]
+     }
+    ]
+   },
+   "documents": [],
+   "images": [],
+   "audio": [],
+   "sources": [
+    {
+     "id": "src_mkt_nvda",
+     "title": "NVDA price & volume history",
+     "publisher": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/NVDA",
+     "published_at": null,
+     "retrieved_at": "2026-10-05T10:30:02.541270+00:00",
+     "source_type": "market_data",
+     "relevance": 1.0,
+     "provider": "yahoo_finance",
+     "tags": []
+    },
+    {
+     "id": "yh_d082f03654aa",
+     "title": "Nvidia's $20bn licensing deal with Groq faces lawsuit from jilted engineers",
+     "publisher": "Financial Times",
+     "url": "https://finance.yahoo.com/technology/articles/nvidia-20bn-licensing-deal-groq-090003163.html",
+     "published_at": "2026-10-05T10:03:51+00:00",
+     "retrieved_at": "2026-10-05T10:29:57.713816+00:00",
+     "source_type": "news",
+     "relevance": 0.998,
+     "provider": "yahoo_finance_news",
+     "tags": []
+    },
+    {
+     "id": "yh_9c5a81eff96d",
+     "title": "Nvidia Just Added $150 Billion to Its Buyback Plan. Selling Shares Inside Your IRA Won\u2019t Make More Social Security Taxable, but Taking the Money Out Could",
+     "publisher": "24/7 Wall St.",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-just-added-150-billion-093006256.html",
+     "published_at": "2026-10-05T09:30:06+00:00",
+     "retrieved_at": "2026-10-05T10:29:57.713816+00:00",
+     "source_type": "news",
+     "relevance": 0.996,
+     "provider": "yahoo_finance_news",
+     "tags": []
+    },
+    {
+     "id": "yh_5ad46b7fc9e5",
+     "title": "Nvidia Set for Stock Record as Key Supplier Celebrates Booming AI Demand",
+     "publisher": "Barrons.com",
+     "url": "https://finance.yahoo.com/m/687e77fb-486c-339d-9a49-1b7cbc3224cb/nvidia-set-for-stock-record.html",
+     "published_at": "2026-10-05T08:50:00+00:00",
+     "retrieved_at": "2026-10-05T10:29:57.713816+00:00",
+     "source_type": "news",
+     "relevance": 0.993,
+     "provider": "yahoo_finance_news",
+     "tags": []
+    },
+    {
+     "id": "yh_d90b79f54d2c",
+     "title": "BNP Paribas Adjusts Price Target on Nvidia to $345 From $285, Keeps Outperform Rating",
+     "publisher": "MT Newswires",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/bnp-paribas-adjusts-price-target-100742016.html",
+     "published_at": "2026-10-05T10:07:42+00:00",
+     "retrieved_at": "2026-10-05T10:29:57.713816+00:00",
+     "source_type": "news",
+     "relevance": 0.798,
+     "provider": "yahoo_finance_news",
+     "tags": []
+    },
+    {
+     "id": "yh_0d3203421d95",
+     "title": "Where Will Nvidia Stock Be in 2030? Three Scenarios for the World's Most Valuable AI Company",
+     "publisher": "Motley Fool",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/where-nvidia-stock-2030-three-092000986.html",
+     "published_at": "2026-10-05T09:20:00+00:00",
+     "retrieved_at": "2026-10-05T10:29:57.713816+00:00",
+     "source_type": "news",
+     "relevance": 0.795,
+     "provider": "yahoo_finance_news",
+     "tags": []
+    },
+    {
+     "id": "src_mkt_gspc",
+     "title": "S&P 500 (^GSPC)",
+     "publisher": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/%5EGSPC",
+     "published_at": "2026-10-02",
+     "retrieved_at": "2026-10-05T10:30:01.957072+00:00",
+     "source_type": "macro",
+     "relevance": 0.5,
+     "provider": "yahoo_finance",
+     "tags": []
+    },
+    {
+     "id": "src_sec_facts_0001045810",
+     "title": "SEC XBRL company facts \u2014 NVIDIA CORP",
+     "publisher": "SEC EDGAR",
+     "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810",
+     "published_at": null,
+     "retrieved_at": "2026-10-05T10:29:56.680750+00:00",
+     "source_type": "financial_data",
+     "relevance": 0.9,
+     "provider": "sec_edgar",
+     "tags": []
+    },
+    {
+     "id": "src_filing_1dc1a36d5d9b",
+     "title": "8-K filed 2026-09-03",
+     "publisher": "SEC EDGAR",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm",
+     "published_at": "2026-09-03",
+     "retrieved_at": "2026-10-05T10:29:56.680750+00:00",
+     "source_type": "sec_filing",
+     "relevance": 0.7,
+     "provider": "sec_edgar",
+     "tags": []
+    },
+    {
+     "id": "src_filing_238e74491e97",
+     "title": "10-Q filed 2026-08-26",
+     "publisher": "SEC EDGAR",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+     "published_at": "2026-08-26",
+     "retrieved_at": "2026-10-05T10:29:56.680750+00:00",
+     "source_type": "sec_filing",
+     "relevance": 0.7,
+     "provider": "sec_edgar",
+     "tags": []
+    },
+    {
+     "id": "src_filing_acf34b01d96f",
+     "title": "8-K filed 2026-08-26",
+     "publisher": "SEC EDGAR",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm",
+     "published_at": "2026-08-26",
+     "retrieved_at": "2026-10-05T10:29:56.680750+00:00",
+     "source_type": "sec_filing",
+     "relevance": 0.7,
+     "provider": "sec_edgar",
+     "tags": []
+    },
+    {
+     "id": "src_filing_1882260a6135",
+     "title": "8-K filed 2026-08-17",
+     "publisher": "SEC EDGAR",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000069/nvda-20260817.htm",
+     "published_at": "2026-08-17",
+     "retrieved_at": "2026-10-05T10:29:56.680750+00:00",
+     "source_type": "sec_filing",
+     "relevance": 0.7,
+     "provider": "sec_edgar",
+     "tags": []
+    },
+    {
+     "id": "src_filing_78dd85f5a12c",
+     "title": "8-K filed 2026-07-02",
+     "publisher": "SEC EDGAR",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000060/nvda-20260628.htm",
+     "published_at": "2026-07-02",
+     "retrieved_at": "2026-10-05T10:29:56.680750+00:00",
+     "source_type": "sec_filing",
+     "relevance": 0.7,
+     "provider": "sec_edgar",
+     "tags": []
+    },
+    {
+     "id": "src_filing_31f3300ffaf0",
+     "title": "8-K filed 2026-06-30",
+     "publisher": "SEC EDGAR",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000056/nvda-20260624.htm",
+     "published_at": "2026-06-30",
+     "retrieved_at": "2026-10-05T10:29:56.680750+00:00",
+     "source_type": "sec_filing",
+     "relevance": 0.7,
+     "provider": "sec_edgar",
+     "tags": []
+    },
+    {
+     "id": "src_mkt_ixic",
+     "title": "Nasdaq Composite (^IXIC)",
+     "publisher": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/%5EIXIC",
+     "published_at": "2026-10-02",
+     "retrieved_at": "2026-10-05T10:30:01.957072+00:00",
+     "source_type": "macro",
+     "relevance": 0.5,
+     "provider": "yahoo_finance",
+     "tags": []
+    },
+    {
+     "id": "src_mkt_vix",
+     "title": "VIX volatility index (^VIX)",
+     "publisher": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/%5EVIX",
+     "published_at": "2026-10-05",
+     "retrieved_at": "2026-10-05T10:30:01.957072+00:00",
+     "source_type": "macro",
+     "relevance": 0.5,
+     "provider": "yahoo_finance",
+     "tags": []
+    },
+    {
+     "id": "src_mkt_tnx",
+     "title": "US 10Y yield (^TNX)",
+     "publisher": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/%5ETNX",
+     "published_at": "2026-10-02",
+     "retrieved_at": "2026-10-05T10:30:01.957072+00:00",
+     "source_type": "macro",
+     "relevance": 0.5,
+     "provider": "yahoo_finance",
+     "tags": []
+    },
+    {
+     "id": "src_mkt_dx-ynyb",
+     "title": "US Dollar index (DX-Y.NYB)",
+     "publisher": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/DX-Y.NYB",
+     "published_at": "2026-10-05",
+     "retrieved_at": "2026-10-05T10:30:01.957072+00:00",
+     "source_type": "macro",
+     "relevance": 0.5,
+     "provider": "yahoo_finance",
+     "tags": []
+    },
+    {
+     "id": "src_mkt_clf",
+     "title": "WTI crude oil (CL=F)",
+     "publisher": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/CL%3DF",
+     "published_at": "2026-10-05",
+     "retrieved_at": "2026-10-05T10:30:01.957072+00:00",
+     "source_type": "macro",
+     "relevance": 0.5,
+     "provider": "yahoo_finance",
+     "tags": []
+    },
+    {
+     "id": "src_mkt_gcf",
+     "title": "Gold (GC=F)",
+     "publisher": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/GC%3DF",
+     "published_at": "2026-10-05",
+     "retrieved_at": "2026-10-05T10:30:01.957072+00:00",
+     "source_type": "macro",
+     "relevance": 0.5,
+     "provider": "yahoo_finance",
+     "tags": []
+    }
+   ],
+   "agent_runs": [
+    {
+     "agent": "orchestrator",
+     "status": "completed",
+     "summary": "Assembled research team: market, news, financial, macro, sentiment, event_detection, risk",
+     "started_at": "2026-10-05T10:29:52.155905+00:00",
+     "finished_at": "2026-10-05T10:29:55.818183+00:00",
+     "duration_ms": 3660
+    },
+    {
+     "agent": "financial",
+     "status": "completed",
+     "summary": "Analyzed latest available financial data (period ending 2026-07-26)",
+     "started_at": "2026-10-05T10:29:55.825188+00:00",
+     "finished_at": "2026-10-05T10:29:56.685402+00:00",
+     "duration_ms": 855
+    },
+    {
+     "agent": "macro",
+     "status": "completed",
+     "summary": "Collected 7 market & macro indicators",
+     "started_at": "2026-10-05T10:29:55.841184+00:00",
+     "finished_at": "2026-10-05T10:30:01.958868+00:00",
+     "duration_ms": 6116
+    },
+    {
+     "agent": "market",
+     "status": "completed",
+     "summary": "Analyzed price, volatility and volume (NVDA +1.34%)",
+     "started_at": "2026-10-05T10:29:55.843185+00:00",
+     "finished_at": "2026-10-05T10:30:02.547286+00:00",
+     "duration_ms": 6698
+    },
+    {
+     "agent": "news",
+     "status": "completed",
+     "summary": "Reviewed 40 articles; 5 themes from 5 publishers",
+     "started_at": "2026-10-05T10:29:55.845184+00:00",
+     "finished_at": "2026-10-05T10:30:32.723627+00:00",
+     "duration_ms": 36874
+    },
+    {
+     "agent": "event_detection",
+     "status": "completed",
+     "summary": "Built a timeline of 10 events",
+     "started_at": "2026-10-05T10:30:32.729670+00:00",
+     "finished_at": "2026-10-05T10:30:32.732988+00:00",
+     "duration_ms": 0
+    },
+    {
+     "agent": "sentiment",
+     "status": "completed",
+     "summary": "Sentiment positive; evidence confidence medium",
+     "started_at": "2026-10-05T10:30:32.738054+00:00",
+     "finished_at": "2026-10-05T10:30:32.742497+00:00",
+     "duration_ms": 0
+    },
+    {
+     "agent": "risk",
+     "status": "completed",
+     "summary": "Identified 1 risk themes (0 high)",
+     "started_at": "2026-10-05T10:30:32.746825+00:00",
+     "finished_at": "2026-10-05T10:30:39.427387+00:00",
+     "duration_ms": 6673
+    },
+    {
+     "agent": "evidence",
+     "status": "completed",
+     "summary": "Cross-checked 6 supporting sources; scored 4 likely drivers",
+     "started_at": "2026-10-05T10:30:39.435403+00:00",
+     "finished_at": "2026-10-05T10:30:39.442405+00:00",
+     "duration_ms": 0
+    },
+    {
+     "agent": "synthesis",
+     "status": "completed",
+     "summary": "Generated final explanation",
+     "started_at": "2026-10-05T10:30:39.445920+00:00",
+     "finished_at": "2026-10-05T10:30:56.159161+00:00",
+     "duration_ms": 16707
+    },
+    {
+     "agent": "voice",
+     "status": "completed",
+     "summary": "Generated a 1:57 audio briefing",
+     "started_at": "2026-10-05T10:30:56.163160+00:00",
+     "finished_at": "2026-10-05T10:31:09.969929+00:00",
+     "duration_ms": 13802
+    }
+   ],
+   "model_usage": [
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-6-luna",
+     "purpose": "plan",
+     "agent": "orchestrator",
+     "input_tokens": 655,
+     "output_tokens": 183,
+     "latency_ms": 3658,
+     "cost_usd": 0.000157,
+     "ok": true
+    },
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-6-luna",
+     "purpose": "label_clusters",
+     "agent": "news",
+     "input_tokens": 1154,
+     "output_tokens": 555,
+     "latency_ms": 6380,
+     "cost_usd": 0.000421675,
+     "ok": true
+    },
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-6-luna",
+     "purpose": "risk_assessment",
+     "agent": "risk",
+     "input_tokens": 2298,
+     "output_tokens": 420,
+     "latency_ms": 6668,
+     "cost_usd": 0.000497175,
+     "ok": true
+    },
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-6-luna",
+     "purpose": "synthesis",
+     "agent": "synthesis",
+     "input_tokens": 4103,
+     "output_tokens": 1952,
+     "latency_ms": 16689,
+     "cost_usd": 0.0014888,
+     "ok": true
+    },
+    {
+     "provider": "openrouter",
+     "model": "openai/gpt-audio-mini",
+     "purpose": "tts",
+     "agent": "voice",
+     "input_tokens": null,
+     "output_tokens": null,
+     "latency_ms": 7277,
+     "cost_usd": 0.003846,
+     "ok": true
+    },
+    {
+     "provider": "openrouter",
+     "model": "openai/gpt-audio-mini",
+     "purpose": "tts",
+     "agent": "voice",
+     "input_tokens": null,
+     "output_tokens": null,
+     "latency_ms": 6510,
+     "cost_usd": 0.0033498,
+     "ok": true
+    },
+    {
+     "provider": "OpenAI",
+     "model": "openai/gpt-6-luna",
+     "purpose": "followup_answer",
+     "agent": "followup",
+     "input_tokens": 2908,
+     "output_tokens": 758,
+     "latency_ms": 9001,
+     "cost_usd": 0.000742425,
+     "ok": true
+    },
+    {
+     "provider": "openrouter",
+     "model": "google/gemini-3.1-flash-image",
+     "purpose": "image_generation",
+     "agent": "infographic",
+     "input_tokens": null,
+     "output_tokens": null,
+     "latency_ms": 8047,
+     "cost_usd": 0.067326,
+     "ok": true
+    }
+   ],
+   "warnings": [
+    "News provider unavailable: gdelt"
+   ],
+   "ai_narrative_available": true,
+   "generated_at": "2026-10-05T10:31:09.971933+00:00",
+   "disclaimer": "SignalRoom is an educational financial research prototype. Its analysis is generated from available data and AI models and may contain errors. It does not provide personalized investment advice, execute trades, or guarantee the accuracy or completeness of market information."
+  },
+  "summary": "NVIDIA rose 1.34% in the latest available market session, dated October 2, and outperformed the S&P 500. The supplied market data do not show an unusual move. Headlines published October 5 about AI demand, an expanded buyback plan and a higher BNP Paribas price target are possible supportive context, but they post-date that market session and cannot explain its move. The available data do not esta",
+  "error": null,
+  "audio_status": "ready",
+  "infographic_status": "ready",
+  "followups": [
+   {
+    "followup_id": "demo_fu",
+    "question": "What would invalidate this explanation?",
+    "status": "completed",
+    "answer": "For the October 2 session, the explanation would be undermined if corrected market data showed that NVIDIA did not rise 1.34%, that the S&P 500 did not rise 0.73%, or that NVIDIA did not outperform it by 0.61 percentage points. Those figures support the limited observation that the broad market was also positive while NVIDIA did somewhat better; they do not establish a cause. [src_mkt_nvda, src_mkt_gspc] The timing-based conclusion would need revisiting if reliable records showed the AI-demand, buyback, or BNP Paribas items were actually public before or during October 2 rather than first reported October 5. Conversely, evidence of a specific October 2 company or sector catalyst could make the broad-market context less explanatory. The supplied data do not include enough intraday or contemporaneous catalyst evidence to settle that attribution. [yh_5ad46b7fc9e5, yh_9c5a81eff96d, yh_d90b79f54d2c] Because the move was not flagged as unusual and the explanation is cautious rather than causal, no single observation here decisively falsifies it. The October 5 share-price move remains unevaluated without market data for that session. [src_mkt_nvda]",
+    "evidence_ids": [
+     "src_mkt_nvda",
+     "src_mkt_gspc",
+     "yh_5ad46b7fc9e5",
+     "yh_9c5a81eff96d",
+     "yh_d90b79f54d2c"
+    ],
+    "agents_run": [],
+    "upload_ids": [],
+    "created_at": "2026-10-05T10:31:09.980817+00:00",
+    "completed_at": "2026-10-05T10:31:19.000157+00:00"
+   }
+  ],
+  "attempts": 1,
+  "created_at": "2026-10-05T10:29:52.126024+00:00",
+  "updated_at": "2026-10-05T10:31:19.000157+00:00",
+  "completed_at": "2026-10-05T10:31:09.971933+00:00"
+ },
+ "events": [
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196192130698,
+   "timestamp": "2026-10-05T10:29:52.130698+00:00",
+   "event_type": "running",
+   "message": "SignalRoom is assembling your research team...",
+   "agent": "orchestrator",
+   "progress": 0,
+   "status": "running",
+   "metadata": {}
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196192154902,
+   "timestamp": "2026-10-05T10:29:52.154902+00:00",
+   "event_type": "planning",
+   "message": "Orchestrator started",
+   "agent": "orchestrator",
+   "progress": 0,
+   "status": "running",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196195817183,
+   "timestamp": "2026-10-05T10:29:55.817183+00:00",
+   "event_type": "planning",
+   "message": "Assembled research team: market, news, financial, macro, sentiment, event_detection, risk",
+   "agent": "orchestrator",
+   "progress": 17,
+   "status": "running",
+   "metadata": {
+    "phase": "completed",
+    "label": "Orchestrator",
+    "duration_ms": 3660
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196195824292,
+   "timestamp": "2026-10-05T10:29:55.824292+00:00",
+   "event_type": "financial",
+   "message": "Financial Agent started",
+   "agent": "financial",
+   "progress": 17,
+   "status": "collecting_data",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196195840185,
+   "timestamp": "2026-10-05T10:29:55.840185+00:00",
+   "event_type": "macro",
+   "message": "Macro Agent started",
+   "agent": "macro",
+   "progress": 17,
+   "status": "collecting_data",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196195842183,
+   "timestamp": "2026-10-05T10:29:55.842183+00:00",
+   "event_type": "market_data",
+   "message": "Market Agent started",
+   "agent": "market",
+   "progress": 17,
+   "status": "collecting_data",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196195844187,
+   "timestamp": "2026-10-05T10:29:55.844187+00:00",
+   "event_type": "news",
+   "message": "News Agent started",
+   "agent": "news",
+   "progress": 17,
+   "status": "collecting_data",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196196682746,
+   "timestamp": "2026-10-05T10:29:56.682746+00:00",
+   "event_type": "financial",
+   "message": "Analyzed latest available financial data (period ending 2026-07-26)",
+   "agent": "financial",
+   "progress": 25,
+   "status": "collecting_data",
+   "metadata": {
+    "phase": "completed",
+    "label": "Financial Agent",
+    "duration_ms": 855
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196201958868,
+   "timestamp": "2026-10-05T10:30:01.958868+00:00",
+   "event_type": "macro",
+   "message": "Collected 7 market & macro indicators",
+   "agent": "macro",
+   "progress": 34,
+   "status": "collecting_data",
+   "metadata": {
+    "phase": "completed",
+    "label": "Macro Agent",
+    "duration_ms": 6116
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196202544274,
+   "timestamp": "2026-10-05T10:30:02.544274+00:00",
+   "event_type": "market_data",
+   "message": "Analyzed price, volatility and volume (NVDA +1.34%)",
+   "agent": "market",
+   "progress": 43,
+   "status": "collecting_data",
+   "metadata": {
+    "phase": "completed",
+    "label": "Market Agent",
+    "duration_ms": 6698
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196232722611,
+   "timestamp": "2026-10-05T10:30:32.722611+00:00",
+   "event_type": "news",
+   "message": "Reviewed 40 articles; 5 themes from 5 publishers",
+   "agent": "news",
+   "progress": 51,
+   "status": "collecting_data",
+   "metadata": {
+    "phase": "completed",
+    "label": "News Agent",
+    "duration_ms": 36874
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196232728656,
+   "timestamp": "2026-10-05T10:30:32.728656+00:00",
+   "event_type": "events",
+   "message": "Event Detection Agent started",
+   "agent": "event_detection",
+   "progress": 51,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196232730671,
+   "timestamp": "2026-10-05T10:30:32.730671+00:00",
+   "event_type": "events",
+   "message": "Built a timeline of 10 events",
+   "agent": "event_detection",
+   "progress": 60,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "completed",
+    "label": "Event Detection Agent",
+    "duration_ms": 0
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196232736051,
+   "timestamp": "2026-10-05T10:30:32.735032+00:00",
+   "event_type": "sentiment",
+   "message": "Sentiment Agent started",
+   "agent": "sentiment",
+   "progress": 60,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196232740477,
+   "timestamp": "2026-10-05T10:30:32.740477+00:00",
+   "event_type": "sentiment",
+   "message": "Sentiment positive; evidence confidence medium",
+   "agent": "sentiment",
+   "progress": 69,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "completed",
+    "label": "Sentiment Agent",
+    "duration_ms": 0
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196232745819,
+   "timestamp": "2026-10-05T10:30:32.745819+00:00",
+   "event_type": "risk",
+   "message": "Risk Agent started",
+   "agent": "risk",
+   "progress": 69,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196239423388,
+   "timestamp": "2026-10-05T10:30:39.423388+00:00",
+   "event_type": "risk",
+   "message": "Identified 1 risk themes (0 high)",
+   "agent": "risk",
+   "progress": 77,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "completed",
+    "label": "Risk Agent",
+    "duration_ms": 6673
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196239431405,
+   "timestamp": "2026-10-05T10:30:39.431405+00:00",
+   "event_type": "evidence",
+   "message": "Evidence Agent started",
+   "agent": "evidence",
+   "progress": 77,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196239439403,
+   "timestamp": "2026-10-05T10:30:39.439403+00:00",
+   "event_type": "evidence",
+   "message": "Cross-checked 6 supporting sources; scored 4 likely drivers",
+   "agent": "evidence",
+   "progress": 86,
+   "status": "analyzing",
+   "metadata": {
+    "phase": "completed",
+    "label": "Evidence Agent",
+    "duration_ms": 0
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196239444404,
+   "timestamp": "2026-10-05T10:30:39.444404+00:00",
+   "event_type": "synthesis",
+   "message": "Synthesis Agent started",
+   "agent": "synthesis",
+   "progress": 86,
+   "status": "synthesizing",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196256156158,
+   "timestamp": "2026-10-05T10:30:56.156158+00:00",
+   "event_type": "synthesis",
+   "message": "Generated final explanation",
+   "agent": "synthesis",
+   "progress": 95,
+   "status": "synthesizing",
+   "metadata": {
+    "phase": "completed",
+    "label": "Synthesis Agent",
+    "duration_ms": 16707
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196256161156,
+   "timestamp": "2026-10-05T10:30:56.161156+00:00",
+   "event_type": "audio",
+   "message": "Voice Agent started",
+   "agent": "voice",
+   "progress": 95,
+   "status": "generating_audio",
+   "metadata": {
+    "phase": "started"
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196269967341,
+   "timestamp": "2026-10-05T10:31:09.967341+00:00",
+   "event_type": "audio",
+   "message": "Generated a 1:57 audio briefing",
+   "agent": "voice",
+   "progress": 95,
+   "status": "generating_audio",
+   "metadata": {
+    "phase": "completed",
+    "label": "Voice Agent",
+    "duration_ms": 13802
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196269977817,
+   "timestamp": "2026-10-05T10:31:09.977817+00:00",
+   "event_type": "completed",
+   "message": "Investigation complete",
+   "agent": null,
+   "progress": 100,
+   "status": "completed",
+   "metadata": {
+    "cost_usd": 0.00976,
+    "model_calls": 6
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196269987816,
+   "timestamp": "2026-10-05T10:31:09.987816+00:00",
+   "event_type": "followup_running",
+   "message": "Reviewing existing evidence",
+   "agent": null,
+   "progress": null,
+   "status": null,
+   "metadata": {
+    "followup_id": "demo_fu"
+   }
+  },
+  {
+   "investigation_id": "demo_nvda",
+   "seq": 1791196279003157,
+   "timestamp": "2026-10-05T10:31:19.003157+00:00",
+   "event_type": "followup_completed",
+   "message": "Follow-up answered",
+   "agent": null,
+   "progress": null,
+   "status": null,
+   "metadata": {
+    "followup_id": "demo_fu"
+   }
+  }
+ ]
+}

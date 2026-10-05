@@ -1,0 +1,26 @@
+# Copy to terraform.tfvars and adjust. Never put API keys here (use scripts/set_secrets.sh).
+region      = "eu-west-1"
+project     = "signalroom"
+environment = "dev"
+image_tag   = "latest"
+
+# Email (optional). AWS sends a verification link to each address after apply.
+ses_from_email         = ""   # e.g. "signalroom.briefings@gmail.com"
+ses_sandbox_recipients = []   # e.g. ["teammate1@gmail.com", "professor@university.edu"]
+
+briefing_schedule_enabled = true
+worker_use_spot           = true
+api_desired_count         = 1   # set to 0 to pause and save credits
+worker_desired_count      = 1
+
+# ---- Budget protection (recommended for the public demo) -------------------------
+# Only these emails (or "@domain") can sign up and use the API. Empty list = anyone can sign up.
+allowed_emails = ["ivan@example.com", "teammate@example.com", "professor@university.edu"]
+
+# Optional password for the whole web (the browser shows a login prompt). Share it with the professor.
+# Leave "" to disable. terraform.tfvars is git-ignored: never commit it.
+site_username = "signalroom"
+site_password = ""
+
+max_investigations_per_day = 20
+max_briefings_per_day      = 5
