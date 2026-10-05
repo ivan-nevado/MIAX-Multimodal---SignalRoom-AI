@@ -1,0 +1,96 @@
+# Local development.
+#
+#   docker compose up --build
+#     → http://localhost:8080  (UI)   http://localhost:8000/api/docs  (API)
+#     BACKEND_MODE=local: JSON-file storage + in-process worker. Needs OPENROUTER_API_KEY in .env.
+#
+#   docker compose --profile aws-local up --build
+#     → exercises the real AWS code paths against LocalStack (DynamoDB, S3, SQS,
+#       Secrets Manager, SES) with a SEPARATE worker container polling SQS, exactly like ECS.
+#       UI on http://localhost:8081, API on http://localhost:8001.
+
+services:
+  api:
+    build: ./backend
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      BACKEND_MODE: local
+      AUTH_MODE: local
+      APP_BASE_URL: http://localhost:8000
+      FRONTEND_URL: http://localhost:8080
+      CORS_ORIGINS: http://localhost:8080,http://localhost:5173
+      LOCAL_DATA_DIR: /data
+    ports: ["8000:8000"]
+    volumes: [signalroom-data:/data]
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports: ["8080:8080"]
+    depends_on: [api]
+
+  # ------------------------------------------------------------------ aws-local profile
+  localstack:
+    profiles: [aws-local]
+    image: localstack/localstack:3.8
+    environment:
+      SERVICES: dynamodb,s3,sqs,secretsmanager,ses
+      AWS_DEFAULT_REGION: eu-west-1
+    ports: ["4566:4566"]
+
+  aws-bootstrap:
+    profiles: [aws-local]
+    build: ./backend
+    depends_on: [localstack]
+    env_file:
+      - path: .env
+        required: false
+    environment: &aws-env
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
+      AWS_REGION: eu-west-1
+      AWS_ENDPOINT_URL: http://localstack:4566
+      DYNAMODB_TABLE_PREFIX: signalroom-local
+      S3_BUCKET: signalroom-local-uploads
+      SQS_INVESTIGATION_QUEUE_URL: http://localstack:4566/000000000000/signalroom-local-investigations
+      SQS_BRIEFING_QUEUE_URL: http://localstack:4566/000000000000/signalroom-local-briefings
+      SECRETS_MANAGER_SECRET_ID: signalroom/local/app
+      BACKEND_MODE: aws
+      AUTH_MODE: local
+      LOCAL_WORKER_ENABLED: "false"
+      APP_BASE_URL: http://localhost:8001
+      FRONTEND_URL: http://localhost:8081
+      CORS_ORIGINS: http://localhost:8081
+    command: ["python", "-m", "app.workers.bootstrap_local_aws"]
+
+  api-aws:
+    profiles: [aws-local]
+    build: ./backend
+    depends_on:
+      aws-bootstrap: { condition: service_completed_successfully }
+    environment: *aws-env
+    ports: ["8001:8000"]
+
+  worker-aws:
+    profiles: [aws-local]
+    build: ./backend
+    depends_on:
+      aws-bootstrap: { condition: service_completed_successfully }
+    environment: *aws-env
+    command: ["python", "-m", "app.workers.sqs_worker"]
+
+  frontend-aws:
+    profiles: [aws-local]
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports: ["8081:8080"]
+    depends_on: [api-aws]
+    # nginx proxies /api to the "api" host; alias it to the aws API container.
+    links: ["api-aws:api"]
+
+volumes:
+  signalroom-data:

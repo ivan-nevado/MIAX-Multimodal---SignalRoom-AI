@@ -1,0 +1,359 @@
+{
+ "briefing_id": "demo_briefing",
+ "date": "2026-10-05",
+ "briefing_type": "daily",
+ "status": "completed",
+ "headline": "Stocks advanced as investors look ahead to Fed minutes",
+ "greeting": "Good morning.",
+ "summary": "The S&P 500 rose 0.73% and the Nasdaq Composite gained 1.19%. Tesla led the watchlist with a 4.65% rise, while NVIDIA added 1.34% and Bitcoin slipped 0.53%. Fed minutes are in focus this week, alongside a higher VIX and US 10-year yield in the supplied market context.",
+ "sections": [
+  {
+   "title": "Markets rise ahead of Fed minutes",
+   "symbol": null,
+   "body": "The S&P 500 gained 0.73% and the Nasdaq Composite rose 1.19%. Headlines described futures as steady and markets as cautiously optimistic ahead of Fed minutes this week. The VIX stood at 16.28 and the US 10-year yield at 5.277%.",
+   "why_it_matters": "The Fed minutes are a near-term focus against a backdrop of rising equity indexes and elevated cross-asset signals.",
+   "source_ids": [
+    "src_mkt_gspc",
+    "src_mkt_ixic",
+    "src_mkt_vix",
+    "src_mkt_tnx",
+    "yh_9a19f4bf89a4",
+    "yh_58ee1cb5f72e"
+   ]
+  },
+  {
+   "title": "Tesla leads watchlist gains",
+   "symbol": "TSLA",
+   "body": "Tesla rose 4.65% on the day, while its five-day return remained slightly negative at -0.41%. A headline reports that Elon Musk hinted at a possible Tesla-SpaceX merger; the available data does not establish a link between the headline and the share move.",
+   "why_it_matters": "The sharp daily gain contrasts with Tesla's slightly negative five-day return, while merger speculation adds a company-specific headline.",
+   "source_ids": [
+    "yh_c667f99d5efa"
+   ]
+  },
+  {
+   "title": "NVIDIA faces licensing-deal scrutiny",
+   "symbol": "NVDA",
+   "body": "NVIDIA gained 1.34%. The Financial Times reports that its $20 billion Groq licensing deal faces a lawsuit from engineers, while another headline says NVIDIA added $150 billion to its buyback plan.",
+   "why_it_matters": "The reported legal challenge and buyback expansion are notable company developments alongside the day's gain.",
+   "source_ids": [
+    "yh_d082f03654aa",
+    "yh_9c5a81eff96d"
+   ]
+  }
+ ],
+ "top_events": [
+  "Markets rise ahead of Fed minutes",
+  "Tesla leads watchlist gains",
+  "NVIDIA faces licensing-deal scrutiny"
+ ],
+ "watchlist_moves": [
+  {
+   "symbol": "NVDA",
+   "name": "NVIDIA",
+   "last_price": 233.95,
+   "move_pct": 1.34,
+   "return_5d_pct": 3.95,
+   "volume_change_pct": 22.71,
+   "unusual_move": false,
+   "currency": null
+  },
+  {
+   "symbol": "TSLA",
+   "name": "Tesla",
+   "last_price": 370.59,
+   "move_pct": 4.65,
+   "return_5d_pct": -0.41,
+   "volume_change_pct": 43.36,
+   "unusual_move": false,
+   "currency": null
+  },
+  {
+   "symbol": "BTC-USD",
+   "name": "Bitcoin",
+   "last_price": 86021.1094,
+   "move_pct": -0.53,
+   "return_5d_pct": 2.95,
+   "volume_change_pct": -26.89,
+   "unusual_move": false,
+   "currency": null
+  },
+  {
+   "symbol": "^GSPC",
+   "name": "S&P 500",
+   "last_price": 7722.7202,
+   "move_pct": 0.73,
+   "return_5d_pct": -0.27,
+   "volume_change_pct": 2.57,
+   "unusual_move": false,
+   "currency": null
+  },
+  {
+   "symbol": "EURUSD=X",
+   "name": "EUR/USD",
+   "last_price": 1.121,
+   "move_pct": -0.36,
+   "return_5d_pct": -1.48,
+   "volume_change_pct": null,
+   "unusual_move": false,
+   "currency": null
+  }
+ ],
+ "macro_events": [
+  "Fed minutes expected this week, according to headlines",
+  "US 10-year yield at 5.277%",
+  "WTI crude at USD 90.88; gold at USD 4,185.2"
+ ],
+ "risk_flags": [
+  "VIX at 16.28, with a reported change of 6.34",
+  "Reported lawsuit concerning NVIDIA's Groq licensing deal"
+ ],
+ "sources": [
+  {
+   "id": "src_mkt_nvda",
+   "title": "NVDA price & volume history",
+   "publisher": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/quote/NVDA",
+   "published_at": null,
+   "retrieved_at": "2026-10-05T10:32:14.535882+00:00",
+   "source_type": "market_data",
+   "relevance": 1.0,
+   "provider": "yahoo_finance",
+   "tags": []
+  },
+  {
+   "id": "src_mkt_tsla",
+   "title": "TSLA price & volume history",
+   "publisher": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/quote/TSLA",
+   "published_at": null,
+   "retrieved_at": "2026-10-05T10:32:15.140473+00:00",
+   "source_type": "market_data",
+   "relevance": 1.0,
+   "provider": "yahoo_finance",
+   "tags": []
+  },
+  {
+   "id": "src_mkt_btcusd",
+   "title": "BTC-USD price & volume history",
+   "publisher": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/quote/BTC-USD",
+   "published_at": null,
+   "retrieved_at": "2026-10-05T10:32:15.152395+00:00",
+   "source_type": "market_data",
+   "relevance": 1.0,
+   "provider": "yahoo_finance",
+   "tags": []
+  },
+  {
+   "id": "src_mkt_gspc",
+   "title": "S&P 500 (^GSPC)",
+   "publisher": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/quote/%5EGSPC",
+   "published_at": "2026-10-02",
+   "retrieved_at": "2026-10-05T10:32:18.058866+00:00",
+   "source_type": "macro",
+   "relevance": 0.5,
+   "provider": "yahoo_finance",
+   "tags": []
+  },
+  {
+   "id": "src_mkt_eurusdx",
+   "title": "EURUSD=X price & volume history",
+   "publisher": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/quote/EURUSD%3DX",
+   "published_at": null,
+   "retrieved_at": "2026-10-05T10:32:15.175321+00:00",
+   "source_type": "market_data",
+   "relevance": 1.0,
+   "provider": "yahoo_finance",
+   "tags": []
+  },
+  {
+   "id": "yh_9a19f4bf89a4",
+   "title": "Nasdaq, S&P 500, Dow Futures Steady Ahead Of Fed Minutes This Week: TSLA, SPCX, CBRS, QCOM, PTC, IBRX Stocks In Focus",
+   "publisher": "Stocktwits",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-p-500-dow-futures-085240343.html",
+   "published_at": "2026-10-05T08:52:40+00:00",
+   "retrieved_at": "2026-10-05T10:32:18.055226+00:00",
+   "source_type": "news",
+   "relevance": 0.993,
+   "provider": "yahoo_finance_news",
+   "tags": []
+  },
+  {
+   "id": "yh_c667f99d5efa",
+   "title": "Elon Musk Hints at Tesla-SpaceX Merger: \u201cWho Can Imagine What Action One Might Take\u201d",
+   "publisher": "24/7 Wall St.",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/elon-musk-hints-tesla-spacex-131505937.html",
+   "published_at": "2026-10-03T13:15:05+00:00",
+   "retrieved_at": "2026-10-05T10:32:16.376706+00:00",
+   "source_type": "news",
+   "relevance": 0.86,
+   "provider": "yahoo_finance_news",
+   "tags": []
+  },
+  {
+   "id": "yh_d082f03654aa",
+   "title": "Nvidia's $20bn licensing deal with Groq faces lawsuit from jilted engineers",
+   "publisher": "Financial Times",
+   "url": "https://finance.yahoo.com/technology/articles/nvidia-20bn-licensing-deal-groq-090003163.html",
+   "published_at": "2026-10-05T10:03:51+00:00",
+   "retrieved_at": "2026-10-05T10:32:16.378697+00:00",
+   "source_type": "news",
+   "relevance": 0.998,
+   "provider": "yahoo_finance_news",
+   "tags": []
+  },
+  {
+   "id": "yh_9c5a81eff96d",
+   "title": "Nvidia Just Added $150 Billion to Its Buyback Plan. Selling Shares Inside Your IRA Won\u2019t Make More Social Security Taxable, but Taking the Money Out Could",
+   "publisher": "24/7 Wall St.",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-just-added-150-billion-093006256.html",
+   "published_at": "2026-10-05T09:30:06+00:00",
+   "retrieved_at": "2026-10-05T10:32:16.378697+00:00",
+   "source_type": "news",
+   "relevance": 0.996,
+   "provider": "yahoo_finance_news",
+   "tags": []
+  },
+  {
+   "id": "yh_58ee1cb5f72e",
+   "title": "Stock market today: Dow, S&P 500, Nasdaq futures drift lower amid markets' cautious optimism",
+   "publisher": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-october-5-dow-sp-500-nasdaq-081220790.html",
+   "published_at": "2026-10-05T10:25:15+00:00",
+   "retrieved_at": "2026-10-05T10:32:18.055226+00:00",
+   "source_type": "news",
+   "relevance": 0.8,
+   "provider": "yahoo_finance_news",
+   "tags": []
+  },
+  {
+   "id": "yh_fc3b906d28e8",
+   "title": "The S&P 500 Has Never Been Lower 12 Months After a Midterm Election. Not Once in 19 Tries. Here's Whether 2026 Could Finally Break That Streak.",
+   "publisher": "Motley Fool",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-never-lower-12-084601981.html",
+   "published_at": "2026-10-05T08:46:01+00:00",
+   "retrieved_at": "2026-10-05T10:32:18.055226+00:00",
+   "source_type": "news",
+   "relevance": 0.793,
+   "provider": "yahoo_finance_news",
+   "tags": []
+  },
+  {
+   "id": "src_mkt_ixic",
+   "title": "Nasdaq Composite (^IXIC)",
+   "publisher": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/quote/%5EIXIC",
+   "published_at": "2026-10-02",
+   "retrieved_at": "2026-10-05T10:32:18.058866+00:00",
+   "source_type": "macro",
+   "relevance": 0.5,
+   "provider": "yahoo_finance",
+   "tags": []
+  },
+  {
+   "id": "src_mkt_vix",
+   "title": "VIX volatility index (^VIX)",
+   "publisher": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/quote/%5EVIX",
+   "published_at": "2026-10-05",
+   "retrieved_at": "2026-10-05T10:32:18.058866+00:00",
+   "source_type": "macro",
+   "relevance": 0.5,
+   "provider": "yahoo_finance",
+   "tags": []
+  },
+  {
+   "id": "src_mkt_tnx",
+   "title": "US 10Y yield (^TNX)",
+   "publisher": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/quote/%5ETNX",
+   "published_at": "2026-10-02",
+   "retrieved_at": "2026-10-05T10:32:18.058866+00:00",
+   "source_type": "macro",
+   "relevance": 0.5,
+   "provider": "yahoo_finance",
+   "tags": []
+  },
+  {
+   "id": "src_mkt_dx-ynyb",
+   "title": "US Dollar index (DX-Y.NYB)",
+   "publisher": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/quote/DX-Y.NYB",
+   "published_at": "2026-10-05",
+   "retrieved_at": "2026-10-05T10:32:18.058866+00:00",
+   "source_type": "macro",
+   "relevance": 0.5,
+   "provider": "yahoo_finance",
+   "tags": []
+  },
+  {
+   "id": "src_mkt_clf",
+   "title": "WTI crude oil (CL=F)",
+   "publisher": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/quote/CL%3DF",
+   "published_at": "2026-10-05",
+   "retrieved_at": "2026-10-05T10:32:18.058866+00:00",
+   "source_type": "macro",
+   "relevance": 0.5,
+   "provider": "yahoo_finance",
+   "tags": []
+  },
+  {
+   "id": "src_mkt_gcf",
+   "title": "Gold (GC=F)",
+   "publisher": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/quote/GC%3DF",
+   "published_at": "2026-10-05",
+   "retrieved_at": "2026-10-05T10:32:18.058866+00:00",
+   "source_type": "macro",
+   "relevance": 0.5,
+   "provider": "yahoo_finance",
+   "tags": []
+  }
+ ],
+ "audio_status": "ready",
+ "audio_duration_seconds": 124.6,
+ "email_status": "not_requested",
+ "model_usage": [
+  {
+   "provider": "OpenAI",
+   "model": "openai/gpt-6-luna",
+   "purpose": "daily_briefing",
+   "agent": "briefing",
+   "input_tokens": 2161,
+   "output_tokens": 1388,
+   "latency_ms": 14339,
+   "cost_usd": 0.00096405,
+   "ok": true
+  },
+  {
+   "provider": "openrouter",
+   "model": "openai/gpt-audio-mini",
+   "purpose": "tts",
+   "agent": "voice",
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": 7860,
+   "cost_usd": 0.0041832,
+   "ok": true
+  },
+  {
+   "provider": "openrouter",
+   "model": "openai/gpt-audio-mini",
+   "purpose": "tts",
+   "agent": "voice",
+   "input_tokens": null,
+   "output_tokens": null,
+   "latency_ms": 6685,
+   "cost_usd": 0.003393,
+   "ok": true
+  }
+ ],
+ "error": null,
+ "ai_narrative_available": true,
+ "created_at": "2026-10-05T10:32:14.529437+00:00",
+ "completed_at": "2026-10-05T10:32:46.972184+00:00",
+ "disclaimer": "SignalRoom is an educational financial research prototype. Its analysis is generated from available data and AI models and may contain errors. It does not provide personalized investment advice, execute trades, or guarantee the accuracy or completeness of market information."
+}
