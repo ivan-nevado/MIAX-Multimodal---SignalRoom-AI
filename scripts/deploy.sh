@@ -37,7 +37,8 @@ frontend() {
   aws s3 sync "$ROOT/frontend/dist/" "s3://$(out frontend_bucket)/" --delete \
     --cache-control "public,max-age=31536000,immutable" --exclude index.html
   aws s3 cp "$ROOT/frontend/dist/index.html" "s3://$(out frontend_bucket)/index.html" --cache-control "no-cache"
-  aws cloudfront create-invalidation --distribution-id "$(out cloudfront_distribution_id)" --paths "/index.html" "/" >/dev/null
+  # MSYS_NO_PATHCONV: stop Git Bash on Windows from rewriting "/index.html" into a local path
+  MSYS_NO_PATHCONV=1 aws cloudfront create-invalidation --distribution-id "$(out cloudfront_distribution_id)" --paths "/index.html" "/" >/dev/null
   echo "Frontend published"
 }
 
@@ -48,7 +49,8 @@ esac
 
 echo "> Terraform init"
 $TF init -input=false >/dev/null
-if ! $TF output -raw ecr_repository_url >/dev/null 2>&1; then
+# Newer Terraform prints nothing and exits 0 for a missing output, so test for emptiness too.
+if [ -z "$($TF output -raw ecr_repository_url 2>/dev/null)" ]; then
   echo "> First run: creating the ECR repository"
   $TF apply -input=false -auto-approve -target=module.ecr
 fi
