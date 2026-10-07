@@ -39,5 +39,8 @@ json.dump(secret, open(sys.argv[2], "w"))
 print("Prepared keys:", ", ".join(k for k, v in secret.items() if v))
 PY
 
-aws secretsmanager put-secret-value --region "$REGION" --secret-id "$SECRET_ID" --secret-string "file://$TMP" >/dev/null
+# Git Bash on Windows: the native aws.exe needs a Windows path inside file://
+SECRET_FILE="$TMP"
+command -v cygpath >/dev/null 2>&1 && SECRET_FILE="$(cygpath -m "$TMP")"
+aws secretsmanager put-secret-value --region "$REGION" --secret-id "$SECRET_ID" --secret-string "file://$SECRET_FILE" >/dev/null
 echo "Secret '$SECRET_ID' updated. Restart tasks to load it: ./scripts/deploy.sh --restart-only"
